@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Banco Oficial de 40 tarjetas de Evaluación Oral Integradora de Física I. Vista del estudiante y vista del tribunal. UTN Facultad Regional San Rafael.">
+<meta name="author" content="Cátedra de Física I — Departamento de Materias Básicas — UTN Facultad Regional San Rafael">
+<meta property="og:title" content="Examen Final Oral Integrador — Física I">
+<meta property="og:description" content="Banco Oficial de 40 tarjetas de Evaluación Oral Integradora. Vista del estudiante y vista del tribunal.">
+<meta property="og:type" content="website">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>Examen Integrador Física I</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ─────────────── tokens ─────────────── */
+:root{
+  --paper:#FAF9F6; --surface:#FFFFFF; --surface-2:#F2F0EA; --reserved:#F0EEE7;
+  --ink:#15181C; --ink-2:#3D434B; --muted:#6E7480; --faint:#9AA0A8;
+  --rule:#DCD9D1; --rule-2:#C6C2B8;
+  --steel:#2B3A47; --steel-soft:#E4E8EC;
+  --focus:#2B6CB0;
+  --eje:#2B3A47; --eje-wash:#EEF1F4;
+  --A:#2E5C8A; --A-w:#E9EFF6; --B:#3D7A54; --B-w:#E9F2EC; --C:#8F6B12; --C-w:#F5EFDD;
+  --D:#AC5420; --D-w:#F7EAE1; --E:#6B5040; --E-w:#F1EBE5; --F:#5E4386; --F-w:#EEE9F4;
+  --T:#8D2729; --T-w:#F6E7E7;
+  --f-display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --shadow:0 1px 2px rgba(21,24,28,.05), 0 8px 24px -16px rgba(21,24,28,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#111418; --surface:#181C21; --surface-2:#1F242A; --reserved:#1C2127;
+    --ink:#E9E7E2; --ink-2:#BFC3C9; --muted:#8E949D; --faint:#6B7178;
+    --rule:#2C323A; --rule-2:#3A414A;
+    --steel:#C9D2DA; --steel-soft:#242B33;
+    --focus:#7FB0E0;
+    --eje:#C9D2DA; --eje-wash:#222830;
+    --A:#82ACD6; --A-w:#1B242E; --B:#7CBC93; --B-w:#18241C; --C:#D6B45E; --C-w:#262015;
+    --D:#E09A6A; --D-w:#2A1E16; --E:#C3A38A; --E-w:#231C17; --F:#B197D5; --F-w:#211B2C;
+    --T:#DF8E8E; --T-w:#2A1A1A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111418; --surface:#181C21; --surface-2:#1F242A; --reserved:#1C2127;
+  --ink:#E9E7E2; --ink-2:#BFC3C9; --muted:#8E949D; --faint:#6B7178;
+  --rule:#2C323A; --rule-2:#3A414A;
+  --steel:#C9D2DA; --steel-soft:#242B33;
+  --focus:#7FB0E0;
+  --eje:#C9D2DA; --eje-wash:#222830;
+  --A:#82ACD6; --A-w:#1B242E; --B:#7CBC93; --B-w:#18241C; --C:#D6B45E; --C-w:#262015;
+  --D:#E09A6A; --D-w:#2A1E16; --E:#C3A38A; --E-w:#231C17; --F:#B197D5; --F-w:#211B2C;
+  --T:#DF8E8E; --T-w:#2A1A1A;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--f-sans); font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1440px; margin:0 auto; padding-inline:20px; padding-block:0 56px}
+:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important; transition:none!important}}
+
+/* eje scoping */
+[data-eje="A"]{--eje:var(--A); --eje-wash:var(--A-w)}
+[data-eje="B"]{--eje:var(--B); --eje-wash:var(--B-w)}
+[data-eje="C"]{--eje:var(--C); --eje-wash:var(--C-w)}
+[data-eje="D"]{--eje:var(--D); --eje-wash:var(--D-w)}
+[data-eje="E"]{--eje:var(--E); --eje-wash:var(--E-w)}
+[data-eje="F"]{--eje:var(--F); --eje-wash:var(--F-w)}
+[data-eje="T"]{--eje:var(--T); --eje-wash:var(--T-w)}
+
+/* ─────────────── header ─────────────── */
+header.masthead{border-bottom:1px solid var(--rule); background:var(--surface)}
+.masthead .wrap{padding-block:18px 0}
+.inst{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); display:flex; flex-wrap:wrap; gap:6px 14px;
+}
+.inst span:not(:last-child)::after{content:"";}
+h1{
+  font-family:var(--f-display); font-weight:600; font-size:clamp(24px,3.4vw,34px);
+  line-height:1.15; letter-spacing:-.01em; margin:8px 0 2px; text-wrap:balance;
+}
+.subtitle{color:var(--ink-2); font-size:14.5px; max-width:62ch; margin:0 0 16px}
+.subtitle em{font-style:normal; font-family:var(--f-mono); font-size:13px}
+
+.toolbar{display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding-bottom:16px}
+button{font:inherit; cursor:pointer; border-radius:3px}
+.btn{
+  border:1px solid var(--rule-2); background:var(--surface); color:var(--ink);
+  padding:8px 14px; font-size:13.5px; font-weight:500; display:inline-flex; align-items:center; gap:8px;
+  transition:background .12s ease, border-color .12s ease;
+}
+.btn:hover{background:var(--surface-2); border-color:var(--steel)}
+.btn-primary{background:var(--steel); color:var(--surface); border-color:var(--steel)}
+:root[data-theme="dark"] .btn-primary, :root:not([data-theme="light"]) .btn-primary{color:var(--paper)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .btn-primary{color:#FFF}}
+.btn-primary:hover{background:var(--ink); border-color:var(--ink)}
+.btn[aria-pressed="true"]{background:var(--steel-soft); border-color:var(--steel)}
+.dice{font-family:var(--f-mono); font-size:15px; line-height:1}
+.toolbar .sep{flex:1}
+.now{
+  font-family:var(--f-mono); font-size:11.5px; color:var(--muted); letter-spacing:.04em;
+  display:flex; align-items:center; gap:8px;
+}
+.now b{color:var(--eje); font-weight:600}
+
+/* ─────────────── banco ─────────────── */
+.banco{border-top:1px solid var(--rule); background:var(--surface-2)}
+.banco[hidden]{display:none!important}
+.banco .wrap{padding-block:20px 24px}
+.banco h2{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; margin:0 0 14px;
+}
+.ejegroup{margin-bottom:16px}
+.ejehead{
+  display:flex; align-items:baseline; gap:10px; margin-bottom:7px;
+  border-left:3px solid var(--eje); padding-left:9px;
+}
+.ejehead .n{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--eje); font-weight:600}
+.ejehead .t{font-family:var(--f-display); font-size:15px; font-weight:600}
+.chips{display:grid; grid-template-columns:repeat(auto-fill,minmax(184px,1fr)); gap:6px}
+.chip{
+  text-align:left; border:1px solid var(--rule); background:var(--surface);
+  padding:7px 10px; display:flex; gap:9px; align-items:baseline; color:var(--ink);
+  border-left:3px solid var(--eje); transition:background .12s, border-color .12s;
+}
+.chip:hover{background:var(--eje-wash)}
+.chip[aria-current="true"]{background:var(--eje-wash); border-color:var(--eje); box-shadow:inset 0 0 0 1px var(--eje)}
+.chip code{font-family:var(--f-mono); font-size:11px; color:var(--eje); font-weight:600; flex:none}
+.chip span{font-size:12.5px; line-height:1.3}
+
+/* ─────────────── split ─────────────── */
+.tabs{display:none; gap:0; border:1px solid var(--rule-2); border-radius:3px; overflow:hidden; margin:20px 0 0}
+.tabs button{
+  flex:1; border:0; background:var(--surface); color:var(--muted); padding:10px 8px;
+  font-size:12.5px; font-weight:500; border-radius:0;
+}
+.tabs button[aria-selected="true"]{background:var(--steel-soft); color:var(--ink)}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:24px; align-items:start}
+
+.pane{border:1px solid var(--rule); background:var(--surface); border-radius:3px; box-shadow:var(--shadow); overflow:hidden}
+.pane-tribunal{background:var(--reserved)}
+.pane-head{
+  padding:13px 20px; border-bottom:1px solid var(--rule);
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.pane-head h2{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  margin:0; font-weight:600; color:var(--ink);
+}
+.pane-head p{margin:2px 0 0; font-size:12px; color:var(--muted); width:100%}
+.seal{
+  font-family:var(--f-mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--rule-2); color:var(--muted); padding:3px 7px; border-radius:2px; white-space:nowrap;
+}
+.pane-tribunal .seal{border-color:var(--T); color:var(--T)}
+.pane-body{padding:22px 20px}
+
+/* tarjeta */
+.tarjeta{border-left:4px solid var(--eje); padding-left:16px; margin-bottom:26px}
+.tarjeta .meta{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:5px}
+.tarjeta code{font-family:var(--f-mono); font-size:19px; font-weight:600; color:var(--eje); letter-spacing:.02em}
+.tarjeta .ejelabel{font-family:var(--f-mono); font-size:10px; letter-spacing:.11em; text-transform:uppercase; color:var(--muted)}
+.tarjeta h3{font-family:var(--f-display); font-size:clamp(19px,2.3vw,23px); font-weight:600; margin:0 0 10px; line-height:1.2; text-wrap:balance}
+.situacion{font-size:14.5px; line-height:1.62; color:var(--ink-2); margin:0 0 12px; max-width:64ch}
+.temas{display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0; margin:0}
+.temas li{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.03em; padding:3px 8px;
+  background:var(--eje-wash); color:var(--eje); border-radius:2px;
+}
+
+.recap{
+  font-size:12.5px; line-height:1.5; color:var(--muted); margin:0 0 16px; max-width:62ch;
+}
+.recap b{font-family:var(--f-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:600; display:block; margin-bottom:3px}
+.label{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; margin:0 0 12px; display:block;
+}
+.block{margin-bottom:26px}
+.block:last-child{margin-bottom:0}
+
+/* cronograma */
+.timeband{display:flex; height:7px; border-radius:2px; overflow:hidden; margin-bottom:16px; background:var(--surface-2)}
+.timeband i{display:block; border-right:1px solid var(--surface)}
+.timeband i:last-child{border-right:0}
+.steps{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px}
+.step{
+  display:grid; grid-template-columns:26px 1fr auto; gap:12px; align-items:start;
+  padding:11px 12px 11px 8px; border:1px solid transparent; border-radius:3px;
+  background:none; width:100%; text-align:left; color:inherit; font:inherit;
+}
+.step:hover{background:var(--surface-2)}
+.step[aria-expanded="true"]{background:var(--eje-wash); border-color:var(--rule)}
+.step .num{
+  font-family:var(--f-mono); font-size:11px; font-weight:600; color:var(--muted);
+  border:1px solid var(--rule-2); border-radius:50%; width:24px; height:24px;
+  display:grid; place-items:center; flex:none; line-height:1;
+}
+.step[aria-expanded="true"] .num{background:var(--eje); border-color:var(--eje); color:var(--surface)}
+:root[data-theme="dark"] .step[aria-expanded="true"] .num,
+:root:not([data-theme="light"]) .step[aria-expanded="true"] .num{color:var(--paper)}
+.step .ttl{font-size:14px; font-weight:500; line-height:1.35}
+.step .dur{font-family:var(--f-mono); font-size:11.5px; color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums}
+.step .detail{grid-column:2/-1; font-size:13.5px; color:var(--ink-2); line-height:1.55; margin-top:7px; max-width:58ch}
+.step[aria-expanded="false"] .detail{display:none}
+
+.timer{
+  margin-top:14px; border:1px solid var(--rule); border-radius:3px; padding:12px 14px;
+  display:flex; align-items:center; gap:14px; background:var(--surface);
+}
+.timer .clock{
+  font-family:var(--f-mono); font-size:26px; font-weight:500; font-variant-numeric:tabular-nums;
+  letter-spacing:.02em; line-height:1; color:var(--ink);
+}
+.timer .clock.over{color:var(--T)}
+.timer .lbl{font-size:12px; color:var(--muted); flex:1; line-height:1.35}
+.timer button{padding:6px 12px; font-size:12.5px}
+
+/* preguntas */
+.qgroup{margin-bottom:18px}
+.qgroup:last-of-type{margin-bottom:0}
+.qhead{display:flex; align-items:baseline; gap:8px; margin-bottom:7px}
+.qhead .cr{font-size:12px; font-weight:600; color:var(--ink)}
+.qhead .pts{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.qhead .rule{flex:1; height:1px; background:var(--rule); align-self:center}
+.qlist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px}
+.qlist li{
+  font-size:14px; line-height:1.55; color:var(--ink-2); padding-left:17px; position:relative; max-width:60ch;
+}
+.qlist li::before{
+  content:"—"; position:absolute; left:0; top:0; color:var(--faint); font-family:var(--f-mono); font-size:12px;
+}
+.integradora{
+  border:1px solid var(--rule-2); border-left:4px solid var(--T); border-radius:3px;
+  padding:14px 16px; background:var(--surface);
+}
+.integradora .tag{
+  font-family:var(--f-mono); font-size:9.5px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--T); font-weight:600; display:block; margin-bottom:6px;
+}
+.integradora p{margin:0; font-size:14px; line-height:1.55; color:var(--ink-2); max-width:58ch}
+.integradora .src{margin-top:8px; font-family:var(--f-mono); font-size:10.5px; color:var(--muted)}
+
+/* rúbrica */
+.rub{display:flex; flex-direction:column; gap:10px}
+.crit{border:1px solid var(--rule); border-radius:3px; background:var(--surface); overflow:hidden}
+.crit-head{
+  display:flex; align-items:center; gap:10px; padding:9px 13px; border-bottom:1px solid var(--rule);
+  background:var(--surface-2);
+}
+.crit-head .name{font-size:13.5px; font-weight:600; flex:1}
+.crit-head .max{font-family:var(--f-mono); font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums}
+.crit-head .score{
+  font-family:var(--f-mono); font-size:14px; font-weight:600; font-variant-numeric:tabular-nums;
+  min-width:46px; text-align:right; color:var(--ink);
+}
+.levels{display:grid; grid-template-columns:repeat(3,1fr)}
+.level{
+  border:0; border-right:1px solid var(--rule); background:var(--surface); text-align:left;
+  padding:10px 12px; color:var(--ink-2); font:inherit; border-radius:0; display:block;
+  transition:background .12s ease;
+}
+.level:last-child{border-right:0}
+.level:hover{background:var(--surface-2)}
+.level .lv{
+  font-family:var(--f-mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); display:block; margin-bottom:4px; font-weight:600;
+}
+.level .desc{font-size:12.5px; line-height:1.42; display:block}
+.level[aria-pressed="true"]{background:var(--eje-wash)}
+.level[aria-pressed="true"] .lv{color:var(--eje)}
+.level[aria-pressed="true"] .desc{color:var(--ink)}
+
+.total{
+  margin-top:14px; border-top:2px solid var(--ink); padding-top:12px;
+  display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+}
+.total .lbl{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); flex:1}
+.total .val{font-family:var(--f-mono); font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1}
+.total .den{font-family:var(--f-mono); font-size:15px; color:var(--muted)}
+.total .reset{border:0; background:none; color:var(--muted); font-size:12px; text-decoration:underline; padding:0}
+.total .reset:hover{color:var(--ink)}
+
+.note{
+  margin-top:12px; font-size:12px; line-height:1.5; color:var(--muted);
+  border-left:2px solid var(--rule-2); padding-left:11px; max-width:60ch;
+}
+.note code{font-family:var(--f-mono); font-size:11px}
+
+footer{margin-top:36px; border-top:1px solid var(--rule); padding-top:18px}
+footer p{font-size:12px; color:var(--muted); line-height:1.6; max-width:78ch; margin:0 0 7px}
+footer .sig{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint)}
+
+@media (max-width:1040px){
+  .tabs{display:flex}
+  .split{grid-template-columns:1fr; margin-top:12px}
+  .split[data-pane="estudiante"] .pane-tribunal{display:none}
+  .split[data-pane="tribunal"] .pane-estudiante{display:none}
+}
+@media (max-width:480px){
+  .wrap{padding-inline:16px}
+  .pane-body{padding:18px 15px}
+  .pane-head{padding:12px 15px}
+  .levels{grid-template-columns:1fr}
+  .level{border-right:0; border-bottom:1px solid var(--rule)}
+  .level:last-child{border-bottom:0}
+  .chips{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="inst">
+      <span>Universidad Tecnológica Nacional</span>
+      <span>Facultad Regional San Rafael</span>
+      <span>Departamento de Materias Básicas</span>
+      <span>Cátedra Física I</span>
+    </div>
+    <h1>Examen Final Oral Integrador</h1>
+    <p class="subtitle">Dispositivo de consulta del Banco Oficial de 40 Tarjetas de Evaluación Integradora. Una misma tarjeta, dos vistas: lo que recibe el estudiante y lo que conduce el tribunal. <em>Anexo I y II — Proyecto institucional 2026.</em></p>
+    <div class="toolbar">
+      <button class="btn btn-primary" id="sortear"><span class="dice">◇</span> Sortear tarjeta</button>
+      <button class="btn" id="explorar" aria-pressed="false" aria-controls="banco">Explorar banco</button>
+      <button class="btn" id="tema" title="Cambiar entre tema claro y oscuro">
+        <span class="dice" aria-hidden="true">◐</span> Tema
+      </button>
+      <span class="sep"></span>
+      <span class="now" id="now"></span>
+    </div>
+  </div>
+</header>
+
+<section class="banco" id="banco" hidden>
+  <div class="wrap">
+    <h2>Banco Oficial — 40 tarjetas, 6 ejes temáticos y tarjetas transversales</h2>
+    <div id="grupos"></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-pane="estudiante">Vista del estudiante</button>
+    <button role="tab" aria-selected="false" data-pane="tribunal">Vista del tribunal</button>
+  </div>
+
+  <div class="split" id="split" data-pane="estudiante">
+
+    <!-- ───── ESTUDIANTE ───── -->
+    <section class="pane pane-estudiante" id="pane-estudiante">
+      <div class="pane-head">
+        <h2>Vista del estudiante</h2>
+        <span class="seal">Entrega en mesa</span>
+        <p>Recibe únicamente la situación física y el cronograma de su exposición.</p>
+      </div>
+      <div class="pane-body">
+        <article class="tarjeta" id="t-est">
+          <div class="meta"><code></code><span class="ejelabel"></span></div>
+          <h3></h3>
+          <p class="situacion"></p>
+          <ul class="temas"></ul>
+        </article>
+
+        <div class="block">
+          <span class="label">Cronograma de exposición — Art. 4, procedimiento operativo</span>
+          <div class="timeband" id="band" aria-hidden="true"></div>
+          <ul class="steps" id="steps"></ul>
+          <div class="timer" id="timer">
+            <span class="clock" id="clock">02:00</span>
+            <span class="lbl" id="tlbl">Tiempo de organización</span>
+            <button class="btn" id="play">Iniciar</button>
+            <button class="btn" id="reset">Reiniciar</button>
+          </div>
+          <p class="note">Duración total de la intervención: entre 10 y 12 minutos por estudiante, sin contar la deliberación del tribunal. Es el parámetro que sostiene la viabilidad operativa de mesas de alta concurrencia (Art. 2, cuarto pilar).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── TRIBUNAL ───── -->
+    <section class="pane pane-tribunal" id="pane-tribunal">
+      <div class="pane-head">
+        <h2>Vista del tribunal</h2>
+        <span class="seal">Uso interno — no se entrega</span>
+        <p>Preguntas guía, pregunta integradora obligatoria y Rúbrica Institucional.</p>
+      </div>
+      <div class="pane-body">
+        <article class="tarjeta" id="t-trib">
+          <div class="meta"><code></code><span class="ejelabel"></span></div>
+          <h3></h3>
+          <p class="recap"><b>Situación entregada al estudiante.</b> <span id="recap"></span></p>
+          <span class="label">Resultados de aprendizaje a verificar</span>
+          <ul class="qlist" id="resultados"></ul>
+        </article>
+
+        <div class="block">
+          <span class="label">Preguntas guía de la entrevista estructurada — Paso 3</span>
+          <div id="preguntas"></div>
+        </div>
+
+        <div class="block">
+          <span class="label">Pregunta integradora obligatoria — Paso 4</span>
+          <div class="integradora" id="integradora">
+            <span class="tag">Obligatoria — eje distinto al de la tarjeta</span>
+            <p></p>
+            <div class="src"></div>
+          </div>
+        </div>
+
+        <div class="block">
+          <span class="label">Rúbrica Institucional — Ficha FI-F1-01 v1.0</span>
+          <div class="rub" id="rubrica"></div>
+          <div class="total">
+            <span class="lbl">Puntaje total</span>
+            <span class="val" id="total">—</span><span class="den">/ 10</span>
+            <button class="reset" id="limpiar">Limpiar puntajes</button>
+          </div>
+          <p class="note">Los puntajes de los niveles <b>Adecuado</b> e <b>Insuficiente</b> no están fijados en el proyecto: la rúbrica del Anexo II define solo el puntaje máximo por criterio y los descriptores cualitativos. Los valores que se cargan al seleccionar un nivel son una sugerencia editable; el tribunal asienta el valor definitivo en la columna «Puntaje Obtenido» de la Ficha.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p><b>Estado del contenido.</b> Las 40 tarjetas, sus ejes y sus temas provienen del Anexo I del proyecto institucional. Los enunciados de situación, los resultados de aprendizaje, las preguntas guía y las preguntas integradoras son un borrador de trabajo elaborado para este dispositivo: requieren revisión y aprobación de la cátedra antes de constituir el Banco Oficial.</p>
+    <p><b>Observación sobre el Anexo I.</b> El proyecto asigna color amarillo tanto al Eje C (Energía) como al Eje D (Cantidad de Movimiento). Aquí se diferencian para preservar la función del código cromático; corresponde a la cátedra definir el color definitivo del Eje D.</p>
+    <p class="sig">San Rafael, Mendoza — Cátedra de Física I — Departamento de Materias Básicas — UTN FRSR</p>
+  </footer>
+</main>
+
+<script>
+/* Banco Oficial de Tarjetas de Evaluación Oral Integradora — Física I
+   UTN Facultad Regional San Rafael — Departamento de Materias Básicas
+   Contenido de situaciones y preguntas guía: borrador para revisión de cátedra. */
+
+const EJES = {
+  A: { nombre: "Modelización y Cinemática", color: "#2E5C8A", tag: "Eje A" },
+  B: { nombre: "Dinámica",                  color: "#3D7A54", tag: "Eje B" },
+  C: { nombre: "Energía",                   color: "#B08A2E", tag: "Eje C" },
+  D: { nombre: "Cantidad de Movimiento",    color: "#C2662D", tag: "Eje D" },
+  E: { nombre: "Rotación",                  color: "#7A5C42", tag: "Eje E" },
+  F: { nombre: "Fluidos",                   color: "#6B4E8C", tag: "Eje F" },
+  T: { nombre: "Transversales PAAA 2026",   color: "#9B3232", tag: "Transversal" }
+};
+
+const RUBRICA = [
+  { id: "conceptual", criterio: "Comprensión conceptual", puntaje: 4,
+    excelente: "Explica y fundamenta correctamente los principios y leyes físicas.",
+    adecuado: "Presenta comprensión parcial o imprecisiones menores.",
+    insuficiente: "Presenta errores conceptuales importantes o vacíos graves." },
+  { id: "modelizacion", criterio: "Modelización física", puntaje: 3,
+    excelente: "Identifica correctamente variables, hipótesis y simplificaciones.",
+    adecuado: "Identifica parcialmente el modelo o condicionantes.",
+    insuficiente: "No logra modelizar el fenómeno físico presentado." },
+  { id: "integracion", criterio: "Integración temática", puntaje: 2,
+    excelente: "Relaciona fluidamente distintas unidades del programa.",
+    adecuado: "Relaciona algunos conceptos tras intervención del tribunal.",
+    insuficiente: "Responde de manera fragmentada o desarticulada." },
+  { id: "comunicacion", criterio: "Comunicación técnica", puntaje: 1,
+    excelente: "Utiliza lenguaje científico y vocabulario técnico adecuado.",
+    adecuado: "Presenta imprecisiones menores en el lenguaje.",
+    insuficiente: "Utiliza un lenguaje impropio, vulgar o ambiguo." }
+];
+
+const PROTOCOLO = [
+  { paso: 1, titulo: "Sorteo de la tarjeta", dur: null, durTexto: "Sin tiempo asignado",
+    estudiante: "Extraés una tarjeta del Banco Oficial. Recibís únicamente la descripción de la situación física y el enunciado problemático.",
+    tribunal: "Registra el número de tarjeta sorteada en la Ficha Individual (campo «Tarjeta T-___»)." },
+  { paso: 2, titulo: "Tiempo de organización", dur: 120, durTexto: "2 minutos",
+    estudiante: "Analizás la situación asignada, ordenás tus ideas y estructurás la exposición oral inicial. Podés tomar notas.",
+    tribunal: "No interviene. Controla el cumplimiento del lapso." },
+  { paso: 3, titulo: "Entrevista estructurada", dur: 420, durTexto: "5 a 7 minutos",
+    estudiante: "Exponés la situación y respondés las preguntas guía del tribunal sobre claridad conceptual y capacidad de modelización.",
+    tribunal: "Conduce la entrevista sobre las preguntas guía asociadas a la tarjeta. Puede solicitar desarrollos analíticos, esquemas, gráficos o diagramas de cuerpo libre en pizarra." },
+  { paso: 4, titulo: "Pregunta integradora obligatoria", dur: 180, durTexto: "Aprox. 3 minutos",
+    estudiante: "Respondés al menos una pregunta vinculada a un eje temático distinto al de tu tarjeta.",
+    tribunal: "Incorpora obligatoriamente una pregunta de otro eje para evaluar la visión global del programa." },
+  { paso: 5, titulo: "Calificación y registro en acta", dur: null, durTexto: "Sin exposición",
+    estudiante: "Finaliza tu intervención. El tribunal delibera.",
+    tribunal: "Evalúa mediante la Rúbrica Institucional y asienta los puntajes en la Ficha Individual de Evaluación (FI-F1-01 v1.0)." }
+];
+
+const TARJETAS = [
+/* ───────────────────────── EJE A — Modelización y Cinemática ───────────────────────── */
+{
+  id: "T-01", eje: "A", titulo: "Radar de velocidad en ruta",
+  temas: ["Movimiento rectilíneo", "Velocidad media e instantánea", "Interpretación de mediciones"],
+  situacion: "Un radar fijo instalado en un tramo recto de la Ruta Nacional 143 registra la velocidad de los vehículos en un único punto. La autoridad vial evalúa reemplazarlo por un sistema de tramo, que mide el tiempo que tarda un vehículo entre dos pórticos separados 3 km. Un conductor es sancionado por el sistema de tramo pese a que su velocímetro nunca superó el límite en el momento en que cruzó cada pórtico.",
+  resultados: ["Distinguir velocidad media de velocidad instantánea a partir de mediciones reales", "Interpretar el significado físico de un dato experimental y sus limitaciones"],
+  preguntas: [
+    { c: "conceptual", t: "Definí velocidad media y velocidad instantánea y explicá formalmente la relación entre ambas. ¿Qué mide efectivamente cada uno de los dos sistemas de radar?" },
+    { c: "conceptual", t: "¿Es físicamente posible que el conductor tenga razón, es decir, que su velocidad instantánea en ambos pórticos haya sido menor al límite y aun así la sanción sea correcta? Justificá." },
+    { c: "modelizacion", t: "Planteá el modelo cinemático del tramo. ¿Qué hipótesis estás asumiendo sobre el movimiento del vehículo entre pórticos y cuáles de ellas son prescindibles?" },
+    { c: "modelizacion", t: "El teorema del valor medio garantiza algo sobre este movimiento. Enuncialo en términos físicos y explicá qué aporta a la validez legal de la medición." },
+    { c: "comunicacion", t: "Redactá en una frase técnicamente precisa qué magnitud física acredita cada sistema, como si fuera el fundamento de un informe pericial." }
+  ],
+  integradora: { eje: "C", t: "Si ese mismo vehículo debiera frenar de la velocidad medida hasta detenerse, ¿qué ocurre con su energía cinética y dónde se disipa?" }
+},
+{
+  id: "T-02", eje: "A", titulo: "Dron de inspección industrial",
+  temas: ["Movimiento bidimensional", "Trayectorias", "Sistemas de referencia"],
+  situacion: "Un dron inspecciona la superficie de un tanque de almacenamiento desplazándose horizontalmente a velocidad constante mientras una cámara estabilizada desciende a velocidad constante respecto del dron. El operario en tierra y el técnico ubicado sobre la pasarela móvil del tanque, que acompaña el movimiento horizontal del dron, describen trayectorias distintas para la cámara.",
+  resultados: ["Aplicar el concepto de sistema de referencia a la descripción de un movimiento", "Componer movimientos independientes en dos dimensiones"],
+  preguntas: [
+    { c: "conceptual", t: "¿Qué es un sistema de referencia y por qué la trayectoria no es una propiedad absoluta del movimiento? Describí la trayectoria que observa cada uno de los dos observadores." },
+    { c: "conceptual", t: "Enunciá el principio de independencia de los movimientos y explicá cómo se aplica a este caso." },
+    { c: "modelizacion", t: "Escribí el vector posición de la cámara en función del tiempo para el observador en tierra. Definí explícitamente el origen y los ejes que elegís y justificá la elección." },
+    { c: "modelizacion", t: "¿Cuál de los dos sistemas de referencia es inercial? ¿Cambiaría tu respuesta si la pasarela estuviera acelerando?" },
+    { c: "comunicacion", t: "Esquematizá en pizarra ambas trayectorias indicando con notación correcta los vectores velocidad relativos." }
+  ],
+  integradora: { eje: "B", t: "Si el dron debe mantenerse en vuelo estacionario contra una ráfaga horizontal de viento, planteá el diagrama de cuerpo libre y la condición de equilibrio." }
+},
+{
+  id: "T-03", eje: "A", titulo: "Vehículo autónomo",
+  temas: ["Posición", "Velocidad", "Aceleración"],
+  situacion: "El sistema de control de un vehículo autónomo detecta un obstáculo y debe decidir entre frenar con desaceleración constante o ejecutar una maniobra de esquive. El software dispone de la posición del obstáculo, la velocidad actual del vehículo y la aceleración máxima que los neumáticos pueden sostener sin perder adherencia.",
+  resultados: ["Vincular las magnitudes cinemáticas mediante relaciones de derivación e integración", "Resolver un problema de decisión a partir de un modelo cinemático"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá la relación matemática y física entre posición, velocidad y aceleración. ¿Qué significa físicamente que la aceleración sea negativa mientras la velocidad es positiva?" },
+    { c: "conceptual", t: "Deducí la expresión de la distancia de frenado en función de la velocidad inicial y la desaceleración. ¿Por qué la distancia depende del cuadrado de la velocidad y qué consecuencia de seguridad tiene eso?" },
+    { c: "modelizacion", t: "¿Qué hipótesis simplificatorias estás adoptando al suponer desaceleración constante? Mencioná al menos dos efectos reales que el modelo ignora." },
+    { c: "modelizacion", t: "El tiempo de reacción del sistema es de 100 ms. ¿Cómo se incorpora al modelo y qué tipo de tramo agrega a la distancia total de detención?" },
+    { c: "integracion", t: "¿De dónde proviene físicamente el límite de la aceleración máxima que el sistema debe respetar?" }
+  ],
+  integradora: { eje: "D", t: "Si el esquive falla y hay colisión, ¿qué magnitud conviene analizar para evaluar el daño: la fuerza, el impulso o la energía? Fundamentá." }
+},
+{
+  id: "T-04", eje: "A", titulo: "Sistema de transporte interno",
+  temas: ["MRU", "Optimización de tiempos"],
+  situacion: "Una planta industrial opera una cinta transportadora que traslada piezas a velocidad constante entre dos estaciones separadas 48 m. Ingeniería de procesos propone aumentar la velocidad de la cinta para reducir el tiempo de ciclo, pero el sector de calidad advierte que por encima de cierta velocidad las piezas deslizan sobre la cinta al arrancar.",
+  resultados: ["Aplicar el modelo de movimiento rectilíneo uniforme a un proceso productivo", "Reconocer los límites de validez de un modelo cinemático"],
+  preguntas: [
+    { c: "conceptual", t: "Caracterizá el movimiento rectilíneo uniforme: ¿qué magnitudes permanecen constantes, cuáles varían y cómo son sus gráficos x-t y v-t?" },
+    { c: "modelizacion", t: "Planteá el tiempo de ciclo en función de la velocidad de cinta. ¿La reducción de tiempo es proporcional al aumento de velocidad? Analizá el comportamiento de la función." },
+    { c: "modelizacion", t: "El tramo de arranque no es MRU. ¿Cómo descompondrías el recorrido completo en etapas y qué modelo asignarías a cada una?" },
+    { c: "integracion", t: "La advertencia de calidad sobre el deslizamiento es un problema dinámico, no cinemático. Explicá qué fenómeno físico lo produce y qué magnitud lo limita." },
+    { c: "comunicacion", t: "Presentá al equipo de procesos, en términos técnicos y en no más de tres frases, cuál es el límite físico de la propuesta." }
+  ],
+  integradora: { eje: "B", t: "Planteá el diagrama de cuerpo libre de una pieza durante el arranque de la cinta e indicá qué condición de rozamiento estático debe cumplirse para que no deslice." }
+},
+{
+  id: "T-05", eje: "A", titulo: "Curva de aceleración de un automóvil",
+  temas: ["Gráficos x-t", "Gráficos v-t", "Interpretación física"],
+  situacion: "Un banco de ensayos registra el desempeño de un automóvil y entrega al ingeniero de producto únicamente dos gráficos: posición en función del tiempo y velocidad en función del tiempo, sin tabla de valores. Debe determinar a partir de ellos el momento de máxima aceleración, la distancia recorrida en los primeros segundos y si el vehículo llegó a detenerse.",
+  resultados: ["Interpretar físicamente gráficos cinemáticos", "Extraer información cuantitativa de representaciones gráficas"],
+  preguntas: [
+    { c: "conceptual", t: "¿Qué representa la pendiente en un gráfico x-t y qué representa en un gráfico v-t? ¿Y el área bajo la curva en cada uno?" },
+    { c: "conceptual", t: "Describí cómo se ve en el gráfico x-t un instante de reposo, un cambio de sentido y un tramo de aceleración constante." },
+    { c: "modelizacion", t: "A partir del gráfico v-t, ¿cómo estimarías la distancia recorrida sin conocer la expresión analítica de la curva? Describí el procedimiento y su error." },
+    { c: "modelizacion", t: "¿Puede un gráfico x-t presentar un punto anguloso? ¿Qué implicaría físicamente sobre la aceleración en ese instante?" },
+    { c: "comunicacion", t: "Dibujá en pizarra un par de gráficos x-t y v-t consistentes entre sí para un vehículo que acelera, mantiene velocidad y frena." }
+  ],
+  integradora: { eje: "C", t: "Del gráfico v-t, ¿cómo obtendrías la potencia media desarrollada si conocés la masa del vehículo?" }
+},
+
+/* ───────────────────────────────── EJE B — Dinámica ───────────────────────────────── */
+{
+  id: "T-06", eje: "B", titulo: "Ascensor industrial",
+  temas: ["Segunda Ley de Newton", "Tensión", "Peso aparente"],
+  situacion: "Un ascensor de carga de una planta industrial eleva contenedores. El fabricante del cable especifica una carga de rotura, y el operador pretende cargar el ascensor hasta el máximo indicado en la chapa de capacidad. Durante el arranque ascendente, una balanza colocada bajo la carga marca un valor mayor que el peso estático.",
+  resultados: ["Aplicar la Segunda Ley de Newton a sistemas acelerados", "Distinguir peso real de peso aparente"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá la Segunda Ley de Newton y explicá por qué la balanza marca un valor distinto durante el arranque. ¿Qué mide realmente una balanza?" },
+    { c: "conceptual", t: "Diferenciá peso, masa y peso aparente. ¿En qué condición de movimiento el peso aparente sería nulo?" },
+    { c: "modelizacion", t: "Trazá el diagrama de cuerpo libre de la carga y del conjunto cabina-carga. Planteá las ecuaciones de Newton para las fases de arranque, régimen y frenado." },
+    { c: "modelizacion", t: "¿En cuál de las tres fases el cable soporta la máxima tensión? ¿Por qué la capacidad de chapa no puede calcularse solo con el peso estático?" },
+    { c: "integracion", t: "¿Qué coeficiente de seguridad aplicarías y qué fenómenos justifican su existencia más allá de la aceleración?" }
+  ],
+  integradora: { eje: "C", t: "Calculá conceptualmente la potencia que debe entregar el motor durante el ascenso a velocidad constante y explicá de qué depende." }
+},
+{
+  id: "T-07", eje: "B", titulo: "Plano inclinado transportador",
+  temas: ["Rozamiento", "Componentes de fuerzas"],
+  situacion: "Una rampa transportadora de 18° traslada bultos hacia un entrepiso. Al detenerse la línea por una falla, algunos bultos permanecen quietos sobre la rampa y otros deslizan hacia abajo. Mantenimiento propone recubrir la superficie para aumentar la adherencia.",
+  resultados: ["Descomponer fuerzas en un sistema de referencia adecuado", "Distinguir rozamiento estático de cinético y sus condiciones de aplicación"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá la diferencia entre rozamiento estático y cinético. ¿Por qué el estático se expresa como una desigualdad y el cinético como una igualdad?" },
+    { c: "conceptual", t: "Deducí la condición crítica que determina si un bulto desliza o no sobre la rampa. ¿De qué magnitudes depende y de cuáles no?" },
+    { c: "modelizacion", t: "Justificá la elección de ejes para el diagrama de cuerpo libre. ¿Por qué conviene inclinar el sistema de coordenadas y qué componente del peso aparece en cada eje?" },
+    { c: "modelizacion", t: "Si el resultado no depende de la masa, ¿por qué unos bultos deslizan y otros no? Identificá qué variable real está cambiando entre ellos." },
+    { c: "comunicacion", t: "Explicá a mantenimiento, con lenguaje técnico, qué propiedad física modifica el recubrimiento propuesto y cuál no." }
+  ],
+  integradora: { eje: "C", t: "Un bulto desliza 4 m por la rampa. ¿Qué trabajo realiza el rozamiento y en qué se transforma esa energía?" }
+},
+{
+  id: "T-08", eje: "B", titulo: "Camión en pendiente",
+  temas: ["Potencia requerida", "Fuerzas resistentes"],
+  situacion: "Un camión cargado asciende una pendiente sostenida del 6 % a velocidad constante. El fabricante debe especificar la potencia mínima del motor. Sobre el vehículo actúan el peso, la resistencia aerodinámica y la resistencia a la rodadura.",
+  resultados: ["Analizar el equilibrio dinámico de un vehículo en movimiento uniforme", "Vincular fuerza resistente y potencia mecánica"],
+  preguntas: [
+    { c: "conceptual", t: "Si el camión sube a velocidad constante, la aceleración es nula. ¿Significa eso que no hay fuerza neta ni consumo de potencia? Resolvé la aparente contradicción." },
+    { c: "conceptual", t: "Identificá todas las fuerzas resistentes presentes y explicá de qué variable depende cada una." },
+    { c: "modelizacion", t: "Planteá el diagrama de cuerpo libre y la ecuación de equilibrio dinámico a lo largo de la pendiente. ¿Qué significa físicamente una pendiente del 6 %?" },
+    { c: "modelizacion", t: "¿Cuál de las fuerzas resistentes domina a baja velocidad y cuál a alta velocidad? Justificá a partir de su dependencia funcional." },
+    { c: "integracion", t: "Expresá la potencia requerida en función de la fuerza motriz y la velocidad. ¿Por qué el camión debe reducir marcha en la pendiente?" }
+  ],
+  integradora: { eje: "E", t: "Explicá qué función cumple la caja de cambios en términos de torque y velocidad angular." }
+},
+{
+  id: "T-09", eje: "B", titulo: "Curva peraltada",
+  temas: ["Fuerza centrípeta", "Seguridad vial"],
+  situacion: "Vialidad debe definir el ángulo de peralte de una curva de radio 200 m en una ruta cuya velocidad de diseño es de 90 km/h. El criterio de proyecto establece que a la velocidad de diseño el vehículo debe poder tomar la curva aun sobre pavimento mojado, es decir, sin depender del rozamiento lateral.",
+  resultados: ["Aplicar la Segunda Ley de Newton al movimiento circular", "Justificar criterios de diseño ingenieril a partir de un modelo físico"],
+  preguntas: [
+    { c: "conceptual", t: "¿Qué es la fuerza centrípeta? ¿Es una fuerza adicional que se agrega al diagrama de cuerpo libre? Fundamentá conceptualmente." },
+    { c: "conceptual", t: "¿Por qué un cuerpo que recorre una curva a rapidez constante está acelerado? Caracterizá la dirección y el sentido de esa aceleración." },
+    { c: "modelizacion", t: "Trazá el diagrama de cuerpo libre en el plano perpendicular al movimiento. ¿Qué fuerza aporta la componente centrípeta cuando no hay rozamiento?" },
+    { c: "modelizacion", t: "Deducí la relación entre ángulo de peralte, radio y velocidad de diseño. ¿Por qué el resultado no depende de la masa del vehículo?" },
+    { c: "integracion", t: "¿Qué ocurre si un vehículo toma la curva muy por debajo de la velocidad de diseño? ¿Y muy por encima? Analizá ambos casos." }
+  ],
+  integradora: { eje: "A", t: "Describí el vector velocidad y el vector aceleración de un vehículo en la curva, y explicá por qué no son paralelos." }
+},
+{
+  id: "T-10", eje: "B", titulo: "Sistema de poleas",
+  temas: ["Ventaja mecánica", "Tensión"],
+  situacion: "Un taller instala un aparejo de poleas para elevar un motor de 400 kg. El operario comprueba que con el aparejo debe aplicar una fuerza mucho menor que el peso del motor, pero también que debe tirar de una longitud de cable mucho mayor que la altura a la que sube la carga.",
+  resultados: ["Analizar sistemas vinculados mediante tensiones", "Reconocer la conservación de la energía como límite de la ventaja mecánica"],
+  preguntas: [
+    { c: "conceptual", t: "Definí tensión. En un cable ideal que pasa por poleas ideales, ¿por qué la tensión es la misma en todo su recorrido y qué hipótesis sostienen esa afirmación?" },
+    { c: "conceptual", t: "Definí ventaja mecánica y explicá por qué el operario debe tirar más longitud de cable. ¿Qué principio físico impide que el aparejo 'regale' trabajo?" },
+    { c: "modelizacion", t: "Planteá los diagramas de cuerpo libre de la carga y de la polea móvil, y escribí las ecuaciones de vínculo entre los desplazamientos." },
+    { c: "modelizacion", t: "¿Qué cambia en el análisis si las poleas tienen masa y rozamiento apreciables? Indicá qué hipótesis se cae." },
+    { c: "comunicacion", t: "Formulá con precisión técnica por qué el aparejo multiplica fuerza pero no trabajo." }
+  ],
+  integradora: { eje: "C", t: "Compará el trabajo que realiza el operario con el trabajo realizado sobre la carga en el caso ideal y en el caso real. ¿Qué define el rendimiento del aparejo?" }
+},
+
+/* ───────────────────────────────── EJE C — Energía ───────────────────────────────── */
+{
+  id: "T-11", eje: "C", titulo: "Montacargas industrial",
+  temas: ["Trabajo", "Potencia", "Rendimiento"],
+  situacion: "Un montacargas eleva pallets de 1200 kg a 9 m de altura en 12 segundos. La chapa del motor indica una potencia eléctrica consumida sensiblemente mayor a la potencia mecánica útil calculada para esa operación. El área de energía cuestiona la diferencia.",
+  resultados: ["Vincular trabajo, potencia y rendimiento en un dispositivo real", "Interpretar el balance energético de una máquina"],
+  preguntas: [
+    { c: "conceptual", t: "Definí trabajo mecánico. ¿Bajo qué condiciones una fuerza no realiza trabajo aunque esté aplicada sobre un cuerpo en movimiento?" },
+    { c: "conceptual", t: "Diferenciá potencia media de potencia instantánea. ¿Cuál es relevante para dimensionar el motor y cuál para calcular el consumo?" },
+    { c: "modelizacion", t: "Planteá el balance energético de la operación completa. ¿Qué trabajo realiza el motor si el ascenso incluye arranque, régimen y frenado?" },
+    { c: "modelizacion", t: "Definí rendimiento y enumerá las vías concretas por las que se pierde energía en este equipo. ¿Puede el rendimiento ser del 100 %?" },
+    { c: "integracion", t: "¿Qué energía tiene el pallet al llegar arriba y qué ocurre con ella cuando el montacargas desciende con carga?" }
+  ],
+  integradora: { eje: "B", t: "Durante el arranque, ¿la tensión del cable es mayor, igual o menor al peso del pallet? Justificá con el diagrama de cuerpo libre." }
+},
+{
+  id: "T-12", eje: "C", titulo: "Frenado de emergencia",
+  temas: ["Conversión energética", "Disipación"],
+  situacion: "Un vehículo de 1500 kg frena de 100 km/h hasta detenerse. Los discos de freno alcanzan temperaturas elevadas. Un vehículo eléctrico equivalente, en la misma maniobra, recupera parte de esa energía mediante frenado regenerativo, pero no toda.",
+  resultados: ["Aplicar el teorema del trabajo y la energía cinética", "Analizar procesos de conversión y disipación energética"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá el teorema del trabajo y la energía cinética. Aplicalo a la maniobra de frenado indicando el signo del trabajo del rozamiento." },
+    { c: "conceptual", t: "¿Se conserva la energía en este proceso? Distinguí entre conservación de la energía y conservación de la energía mecánica." },
+    { c: "modelizacion", t: "Planteá el balance energético del frenado convencional. ¿Adónde va la energía cinética inicial y en qué proporción?" },
+    { c: "modelizacion", t: "Si la velocidad inicial se duplica, ¿qué ocurre con la distancia de frenado y con la energía a disipar? Justificá desde el modelo." },
+    { c: "integracion", t: "En el frenado regenerativo, ¿por qué no es posible recuperar el 100 % de la energía cinética?" }
+  ],
+  integradora: { eje: "D", t: "Compará la variación de cantidad de movimiento con la variación de energía cinética durante el frenado. ¿Cuál depende del tiempo y cuál de la distancia?" }
+},
+{
+  id: "T-13", eje: "C", titulo: "Tobogán acuático",
+  temas: ["Conservación de energía", "Pérdidas"],
+  situacion: "El proyectista de un parque acuático calcula la velocidad de salida de un tobogán de 12 m de desnivel aplicando conservación de la energía mecánica. Las mediciones de obra arrojan velocidades sistemáticamente menores a las calculadas, y la diferencia se acentúa en los tramos de mayor longitud.",
+  resultados: ["Aplicar el principio de conservación de la energía mecánica y reconocer sus límites", "Evaluar la validez de hipótesis simplificatorias frente a datos experimentales"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá el principio de conservación de la energía mecánica. ¿Qué condición debe cumplir el sistema para que sea aplicable?" },
+    { c: "conceptual", t: "Diferenciá fuerza conservativa de fuerza no conservativa. Clasificá las fuerzas presentes en el tobogán." },
+    { c: "modelizacion", t: "Planteá el modelo del proyectista y explicitá todas sus hipótesis. Identificá cuál de ellas explica la discrepancia con la medición." },
+    { c: "modelizacion", t: "¿Por qué la velocidad calculada no depende de la masa del usuario ni de la forma del tobogán? ¿Se sostiene eso en el caso real?" },
+    { c: "comunicacion", t: "Explicá al proyectista, con lenguaje técnico, por qué su cálculo constituye una cota superior y no un valor esperado." }
+  ],
+  integradora: { eje: "F", t: "La película de agua del tobogán reduce el rozamiento. Explicá qué propiedad del fluido interviene y cómo actúa." }
+},
+{
+  id: "T-14", eje: "C", titulo: "Central hidroeléctrica",
+  temas: ["Transformación energética", "Potencia"],
+  situacion: "Una central de pasada sobre el río Diamante opera con un salto de 60 m y un caudal derivado constante. La potencia eléctrica efectivamente inyectada a la red resulta menor que la potencia hidráulica bruta del salto, y el operador debe explicar la diferencia ante el ente regulador.",
+  resultados: ["Describir cadenas de transformación energética en un sistema ingenieril", "Vincular caudal, salto y potencia"],
+  preguntas: [
+    { c: "conceptual", t: "Describí la cadena completa de transformaciones energéticas desde el agua embalsada hasta la energía eléctrica en la red." },
+    { c: "conceptual", t: "¿Qué tipo de energía almacena el agua en altura y de qué depende su valor? ¿Respecto de qué nivel se mide?" },
+    { c: "modelizacion", t: "Deducí la expresión de la potencia hidráulica bruta en función del caudal, la densidad y el salto. Explicitá las hipótesis del modelo." },
+    { c: "modelizacion", t: "Enumerá las etapas donde se producen pérdidas y clasificá cada una según su naturaleza física." },
+    { c: "integracion", t: "¿Por qué una central de pasada no puede almacenar energía y qué implicancia tiene eso para el sistema eléctrico?" }
+  ],
+  integradora: { eje: "F", t: "Aplicá la ecuación de Bernoulli entre la superficie del embalse y la entrada de la turbina. ¿Qué término se convierte en qué?" }
+},
+{
+  id: "T-15", eje: "C", titulo: "Turbina eólica",
+  temas: ["Energía mecánica", "Conversión de energía"],
+  situacion: "El fabricante de un aerogenerador informa que la potencia generada se cuadruplica al duplicarse la velocidad del viento y que existe un límite teórico que impide extraer toda la energía del flujo de aire. El área comercial no comprende ninguna de las dos afirmaciones.",
+  resultados: ["Analizar la conversión de energía cinética de un fluido en energía mecánica", "Interpretar dependencias funcionales no lineales"],
+  preguntas: [
+    { c: "conceptual", t: "Planteá la energía cinética de la masa de aire que atraviesa el área barrida por las palas. ¿De qué variables depende?" },
+    { c: "modelizacion", t: "Deducí por qué la potencia disponible depende del cubo de la velocidad del viento y no del cuadrado, como sugiere el área comercial." },
+    { c: "modelizacion", t: "¿Por qué es físicamente imposible extraer el 100 % de la energía cinética del viento? Razoná qué ocurriría con el aire aguas abajo del rotor." },
+    { c: "integracion", t: "¿Qué transformaciones energéticas ocurren entre el viento y la red eléctrica y dónde se ubican las principales pérdidas?" },
+    { c: "comunicacion", t: "Corregí técnicamente la afirmación del fabricante en una frase precisa." }
+  ],
+  integradora: { eje: "E", t: "¿Por qué el rotor gira a velocidad angular mucho menor que el generador y qué elemento resuelve esa diferencia?" }
+},
+
+/* ──────────────────────── EJE D — Cantidad de Movimiento ──────────────────────── */
+{
+  id: "T-16", eje: "D", titulo: "Colisión vehicular",
+  temas: ["Impulso", "Seguridad"],
+  situacion: "Un ensayo de choque frontal compara dos vehículos de igual masa y velocidad. El primero tiene una zona de deformación programada que extiende el tiempo de impacto; el segundo es rígido. Las desaceleraciones máximas registradas en el habitáculo difieren sustancialmente.",
+  resultados: ["Aplicar el teorema del impulso y la cantidad de movimiento", "Fundamentar criterios de diseño de seguridad pasiva"],
+  preguntas: [
+    { c: "conceptual", t: "Definí cantidad de movimiento e impulso, y enunciá la relación entre ambos. ¿Es esta relación equivalente a la Segunda Ley de Newton?" },
+    { c: "conceptual", t: "En ambos ensayos la variación de cantidad de movimiento es la misma. Explicá entonces por qué las fuerzas sobre los ocupantes difieren." },
+    { c: "modelizacion", t: "Definí el sistema que vas a analizar y planteá el balance de cantidad de movimiento. ¿Es un sistema aislado durante el impacto?" },
+    { c: "modelizacion", t: "¿Qué hipótesis permite despreciar el rozamiento con el pavimento durante la colisión? Justificá por qué es razonable." },
+    { c: "integracion", t: "Fundamentá físicamente por qué el cinturón de seguridad y el airbag responden al mismo principio que la zona deformable." }
+  ],
+  integradora: { eje: "C", t: "¿Qué ocurre con la energía cinética en este choque? ¿Se conserva? Relacioná la deformación con el balance energético." }
+},
+{
+  id: "T-17", eje: "D", titulo: "Sistema de amortiguación",
+  temas: ["Transferencia de momentum"],
+  situacion: "Una prensa industrial apoya sobre una fundación con amortiguadores elastoméricos. Sin ellos, cada golpe transmite al edificio picos de fuerza que agrietan la losa; con ellos, la fuerza transmitida se reduce aunque el golpe sea el mismo.",
+  resultados: ["Analizar la transferencia de cantidad de movimiento entre cuerpos", "Vincular el tiempo de interacción con la fuerza transmitida"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá cómo se transfiere cantidad de movimiento entre la maza de la prensa y la estructura. ¿Qué magnitud se conserva y cuál no?" },
+    { c: "conceptual", t: "¿Por qué prolongar el tiempo de interacción reduce la fuerza máxima si el impulso total es el mismo?" },
+    { c: "modelizacion", t: "Definí el sistema y planteá el balance de cantidad de movimiento antes y después del golpe. Indicá las fuerzas internas y externas." },
+    { c: "modelizacion", t: "Distinguí fuerza media de fuerza máxima durante el impacto. ¿Cuál gobierna el daño estructural?" },
+    { c: "comunicacion", t: "Esquematizá cualitativamente en pizarra la curva fuerza-tiempo con y sin amortiguador, señalando que el área encerrada es la misma." }
+  ],
+  integradora: { eje: "C", t: "¿Qué hace el elastómero con la energía del impacto? ¿La almacena, la devuelve o la disipa? Fundamentá." }
+},
+{
+  id: "T-18", eje: "D", titulo: "Cohete experimental",
+  temas: ["Principio de acción y reacción"],
+  situacion: "Un equipo universitario lanza un cohete de agua a presión. Un integrante sostiene que el cohete sube porque el chorro de agua 'empuja contra el aire'. La prueba se repite en una campana de vacío y el cohete asciende igual.",
+  resultados: ["Aplicar la Tercera Ley de Newton y la conservación de la cantidad de movimiento a sistemas de masa variable", "Refutar concepciones erróneas con argumentos físicos"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá la Tercera Ley de Newton. ¿Sobre qué cuerpos actúan el par de fuerzas y por qué no se cancelan entre sí?" },
+    { c: "conceptual", t: "Refutá la explicación del integrante. ¿Contra qué 'empuja' efectivamente el cohete?" },
+    { c: "modelizacion", t: "Definí el sistema cohete más agua expulsada y aplicá la conservación de la cantidad de movimiento. ¿Por qué conviene tomar ese sistema y no solo el cohete?" },
+    { c: "modelizacion", t: "Este es un sistema de masa variable. ¿Qué particularidad introduce eso y por qué no se puede aplicar directamente F = m·a con m constante?" },
+    { c: "integracion", t: "¿De dónde proviene la energía que impulsa al cohete y en qué se transforma?" }
+  ],
+  integradora: { eje: "F", t: "Explicá el rol de la presión interna del aire comprimido en la expulsión del agua." }
+},
+{
+  id: "T-19", eje: "D", titulo: "Acople ferroviario",
+  temas: ["Choques inelásticos"],
+  situacion: "En una playa de maniobras, una locomotora impacta a baja velocidad contra un vagón detenido y ambos quedan acoplados, continuando el movimiento juntos. El área de mantenimiento registra la velocidad final del conjunto para verificar que el acople operó dentro de sus límites de diseño.",
+  resultados: ["Resolver choques perfectamente inelásticos mediante conservación de la cantidad de movimiento", "Distinguir las magnitudes que se conservan en cada tipo de choque"],
+  preguntas: [
+    { c: "conceptual", t: "Clasificá los tipos de choque según qué magnitudes se conservan. ¿En cuál se encuadra este caso y por qué?" },
+    { c: "conceptual", t: "¿Por qué la cantidad de movimiento se conserva aun cuando la energía cinética no? Fundamentá a partir de las fuerzas presentes." },
+    { c: "modelizacion", t: "Planteá la ecuación de conservación para el sistema locomotora-vagón. Definí el sistema, el sentido positivo y las hipótesis adoptadas." },
+    { c: "modelizacion", t: "¿Por qué es lícito despreciar el rozamiento con las vías durante el acople y no antes ni después del mismo?" },
+    { c: "integracion", t: "¿Qué fracción de la energía cinética inicial se pierde en el acople y qué ocurre físicamente con ella?" }
+  ],
+  integradora: { eje: "B", t: "Durante el acople, la desaceleración de la locomotora exige una fuerza. Estimá conceptualmente de qué depende y por qué se limita la velocidad de maniobra." }
+},
+{
+  id: "T-20", eje: "D", titulo: "Máquina de impacto",
+  temas: ["Conservación del momentum"],
+  situacion: "Un péndulo de Charpy determina la energía absorbida por una probeta metálica al romperse. El ensayo mide la altura que alcanza el péndulo después del impacto, y de esa diferencia de alturas se infiere la tenacidad del material.",
+  resultados: ["Integrar conservación de cantidad de movimiento y balance energético en un ensayo real", "Interpretar un procedimiento de medición desde sus fundamentos físicos"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá por qué la diferencia de alturas antes y después del impacto es proporcional a la energía absorbida por la probeta." },
+    { c: "conceptual", t: "¿Se conserva la cantidad de movimiento durante el impacto contra la probeta? ¿Y la energía mecánica? Distinguí ambas respuestas." },
+    { c: "modelizacion", t: "Planteá el balance energético completo del ensayo, desde la liberación del péndulo hasta su altura final." },
+    { c: "modelizacion", t: "¿Qué hipótesis sobre pérdidas por rozamiento en el eje y resistencia del aire asume el método? ¿Cómo se corrigen en la práctica?" },
+    { c: "integracion", t: "Vinculá la fase de caída libre del péndulo con la cinemática y la fase de impacto con la dinámica." }
+  ],
+  integradora: { eje: "E", t: "El péndulo es un cuerpo rígido que rota. ¿Qué magnitud reemplaza a la masa en el análisis rotacional y cómo afecta al ensayo?" }
+},
+
+/* ──────────────────────────────── EJE E — Rotación ──────────────────────────────── */
+{
+  id: "T-21", eje: "E", titulo: "Volante de inercia",
+  temas: ["Momento de inercia"],
+  situacion: "Una prensa mecánica incorpora un volante de inercia que acumula energía entre golpes, permitiendo usar un motor de potencia mucho menor a la que exigiría cada golpe por separado. El proyectista debe decidir entre dos volantes de igual masa: uno macizo y otro con la masa concentrada en la periferia.",
+  resultados: ["Comprender el momento de inercia como propiedad dependiente de la distribución de masa", "Analizar el almacenamiento de energía rotacional"],
+  preguntas: [
+    { c: "conceptual", t: "Definí momento de inercia. ¿Por qué dos cuerpos de igual masa pueden tener momentos de inercia muy distintos?" },
+    { c: "conceptual", t: "Planteá el paralelismo entre las magnitudes de traslación y de rotación: masa, fuerza, cantidad de movimiento y energía cinética." },
+    { c: "modelizacion", t: "Elegí uno de los dos volantes y justificá la elección en términos de la energía almacenada a igual velocidad angular." },
+    { c: "modelizacion", t: "¿Qué hipótesis sobre el cuerpo estás asumiendo al hablar de momento de inercia constante? ¿Cuándo dejaría de valer?" },
+    { c: "integracion", t: "Explicá cómo el volante permite reducir la potencia del motor sin reducir el trabajo por golpe." }
+  ],
+  integradora: { eje: "C", t: "Compará la energía cinética de traslación con la de rotación e indicá qué magnitudes cumplen roles análogos en cada expresión." }
+},
+{
+  id: "T-22", eje: "E", titulo: "Brazo robotizado",
+  temas: ["Torque", "Equilibrio"],
+  situacion: "Un brazo robótico de soldadura debe sostener una herramienta en el extremo. El fabricante especifica que la carga admisible disminuye a medida que el brazo se extiende, aunque la masa de la herramienta no cambie. El área de producción quiere usar una herramienta más pesada acortando el alcance.",
+  resultados: ["Aplicar el concepto de torque y las condiciones de equilibrio de un cuerpo rígido", "Justificar restricciones de diseño mediante análisis de momentos"],
+  preguntas: [
+    { c: "conceptual", t: "Definí torque. ¿De qué depende su valor y por qué es una magnitud vectorial?" },
+    { c: "conceptual", t: "Enunciá las dos condiciones de equilibrio de un cuerpo rígido. ¿Por qué la de fuerzas no alcanza?" },
+    { c: "modelizacion", t: "Planteá el equilibrio de momentos respecto de la base del brazo. ¿Por qué la carga admisible cae al extenderse el brazo?" },
+    { c: "modelizacion", t: "¿Cómo elegís el punto respecto del cual tomar momentos? ¿Cambia el resultado físico según la elección?" },
+    { c: "integracion", t: "Evaluá técnicamente la propuesta de producción: ¿es válida? ¿Qué magnitud debe mantenerse dentro de límites?" }
+  ],
+  integradora: { eje: "B", t: "Si el brazo acelera angularmente en lugar de estar en equilibrio, ¿qué ecuación reemplaza a la condición de equilibrio de momentos?" }
+},
+{
+  id: "T-23", eje: "E", titulo: "Grúa torre",
+  temas: ["Momento de fuerzas"],
+  situacion: "Una grúa torre de obra opera con un contrapeso fijo en el brazo posterior. La tabla de cargas del fabricante indica que la carga máxima admisible depende del radio de trabajo. El jefe de obra pretende elevar una carga a mayor distancia de la que indica la tabla, argumentando que la grúa 'tiene potencia de sobra'.",
+  resultados: ["Analizar el equilibrio de momentos en una estructura real", "Distinguir limitación por potencia de limitación por estabilidad"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá qué función física cumple el contrapeso y por qué la carga admisible depende del radio de trabajo." },
+    { c: "conceptual", t: "Definí momento de vuelco y momento estabilizador. ¿Qué relación debe existir entre ambos?" },
+    { c: "modelizacion", t: "Planteá el balance de momentos respecto del punto crítico de vuelco. Justificá la elección de ese punto." },
+    { c: "modelizacion", t: "¿Qué hipótesis sobre la rigidez de la estructura y la horizontalidad de la base estás adoptando?" },
+    { c: "integracion", t: "Respondé al jefe de obra: ¿la limitación es de potencia del motor o de otra naturaleza? Fundamentá la diferencia." }
+  ],
+  integradora: { eje: "C", t: "Distinguí la potencia necesaria para elevar la carga de la condición de estabilidad. ¿Por qué son restricciones independientes?" }
+},
+{
+  id: "T-24", eje: "E", titulo: "Puerta industrial",
+  temas: ["Brazo de palanca"],
+  situacion: "Una puerta corrediza industrial de gran tamaño es difícil de operar manualmente. Mantenimiento observa que el operario empuja siempre cerca del eje de giro de la puerta batiente auxiliar y propone reubicar la manija.",
+  resultados: ["Aplicar el concepto de brazo de palanca a un problema operativo", "Vincular geometría y esfuerzo requerido"],
+  preguntas: [
+    { c: "conceptual", t: "Definí brazo de palanca. ¿Por qué el torque depende del punto de aplicación y de la dirección de la fuerza?" },
+    { c: "conceptual", t: "¿Qué ocurre con el torque si la fuerza se aplica en dirección de la línea que une el punto de aplicación con el eje?" },
+    { c: "modelizacion", t: "Planteá el torque como producto vectorial y explicá el significado del ángulo entre fuerza y brazo." },
+    { c: "modelizacion", t: "Evaluá la propuesta de mantenimiento: ¿reduce la fuerza necesaria? ¿Reduce también el trabajo realizado?" },
+    { c: "comunicacion", t: "Explicá al operario, con lenguaje técnico y en una frase, dónde y en qué dirección conviene aplicar la fuerza." }
+  ],
+  integradora: { eje: "C", t: "Si con el cambio se reduce la fuerza pero aumenta el recorrido de la mano, ¿qué magnitud permanece constante?" }
+},
+{
+  id: "T-25", eje: "E", titulo: "Sistema de transmisión",
+  temas: ["Energía rotacional"],
+  situacion: "Una transmisión por engranajes vincula un motor eléctrico de alta velocidad y bajo torque con un tambor de arrastre de baja velocidad y alto torque. El proveedor afirma que la transmisión 'multiplica el torque', y el área técnica pregunta si eso no viola la conservación de la energía.",
+  resultados: ["Analizar la transmisión de potencia mediante magnitudes rotacionales", "Reconocer la conservación de la energía en dispositivos mecánicos"],
+  preguntas: [
+    { c: "conceptual", t: "Planteá la relación entre potencia, torque y velocidad angular. ¿Cómo se vincula con la relación entre potencia, fuerza y velocidad en traslación?" },
+    { c: "conceptual", t: "Resolvé la objeción del área técnica: ¿multiplicar torque viola la conservación de la energía? Fundamentá." },
+    { c: "modelizacion", t: "Planteá la relación de transmisión entre los engranajes en términos de velocidades angulares y de torques. ¿Qué hipótesis asumís sobre pérdidas?" },
+    { c: "modelizacion", t: "Si la transmisión tiene un rendimiento del 92 %, ¿cómo modificás las relaciones anteriores?" },
+    { c: "integracion", t: "Identificá otros dispositivos del programa que multiplican una magnitud a costa de otra y señalá el principio común." }
+  ],
+  integradora: { eje: "B", t: "Establecé el paralelismo completo entre la Segunda Ley de Newton en traslación y su equivalente rotacional." }
+},
+
+/* ──────────────────────────────── EJE F — Fluidos ──────────────────────────────── */
+{
+  id: "T-26", eje: "F", titulo: "Tanque elevado",
+  temas: ["Hidrostática", "Presión"],
+  situacion: "Un tanque elevado abastece por gravedad la red de incendio de una planta. El proyectista debe garantizar una presión mínima en los hidrantes de planta baja. Dos tanques de distinta capacidad y misma altura de instalación producen, según el cálculo, idéntica presión en la base.",
+  resultados: ["Aplicar el principio fundamental de la hidrostática", "Distinguir presión de fuerza en un fluido en reposo"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá el principio fundamental de la hidrostática. ¿Por qué la presión no depende del volumen ni de la forma del recipiente?" },
+    { c: "conceptual", t: "Diferenciá presión de fuerza. ¿Por qué la presión es una magnitud escalar mientras la fuerza que ejerce sobre una pared es vectorial?" },
+    { c: "modelizacion", t: "Deducí la expresión de la presión hidrostática. ¿Qué hipótesis sobre el fluido y el campo gravitatorio estás adoptando?" },
+    { c: "modelizacion", t: "Distinguí presión absoluta de presión manométrica. ¿Cuál corresponde al dato de proyecto de los hidrantes?" },
+    { c: "integracion", t: "¿Qué ocurre con la presión en el hidrante cuando el agua circula? ¿Sigue valiendo el cálculo hidrostático?" }
+  ],
+  integradora: { eje: "C", t: "Interpretá la altura del tanque como energía potencial por unidad de peso. ¿Qué relación tiene con el concepto de carga hidráulica?" }
+},
+{
+  id: "T-27", eje: "F", titulo: "Prensa hidráulica",
+  temas: ["Principio de Pascal"],
+  situacion: "Un taller instala una prensa hidráulica de 20 toneladas. El operario comprueba que aplicando una fuerza modesta sobre el pistón chico obtiene una fuerza enorme sobre el grande, pero que el pistón grande apenas se desplaza mientras el chico recorre una carrera larga.",
+  resultados: ["Aplicar el principio de Pascal a un dispositivo de transmisión de fuerza", "Reconocer la conservación del trabajo como límite del dispositivo"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá el principio de Pascal. ¿Qué condición debe cumplir el fluido para que sea aplicable?" },
+    { c: "conceptual", t: "Explicá por qué la prensa multiplica la fuerza. ¿Qué magnitud es igual en ambos pistones?" },
+    { c: "modelizacion", t: "Planteá la relación entre fuerzas y áreas, y entre desplazamientos y áreas. Vinculá ambas mediante la incompresibilidad del fluido." },
+    { c: "modelizacion", t: "¿Qué hipótesis se caen si el fluido contiene aire disuelto o si hay fugas en los sellos?" },
+    { c: "integracion", t: "Compará la prensa hidráulica con el aparejo de poleas y con la transmisión por engranajes. ¿Cuál es el principio común a los tres?" }
+  ],
+  integradora: { eje: "C", t: "Demostrá que el trabajo realizado sobre el pistón chico es igual al trabajo obtenido en el grande en el caso ideal." }
+},
+{
+  id: "T-28", eje: "F", titulo: "Red de bombeo industrial",
+  temas: ["Bernoulli", "Caudal"],
+  situacion: "Una red de bombeo impulsa agua de proceso desde una cisterna hasta un tanque situado 25 m más arriba, a través de 180 m de cañería. El cálculo de la bomba realizado solo con la diferencia de altura resulta insuficiente en la puesta en marcha: el caudal obtenido es menor al de proyecto.",
+  resultados: ["Aplicar la ecuación de Bernoulli con pérdidas de carga", "Dimensionar un equipo a partir de un balance energético del fluido"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá la ecuación de Bernoulli identificando el significado físico de cada término. ¿Qué principio general expresa?" },
+    { c: "conceptual", t: "¿Bajo qué hipótesis es válida la ecuación de Bernoulli en su forma clásica? Señalá cuál de ellas no se cumple en esta red." },
+    { c: "modelizacion", t: "Planteá el balance entre la superficie de la cisterna y la descarga en el tanque. ¿Qué términos son significativos y cuáles despreciables?" },
+    { c: "modelizacion", t: "Explicá el concepto de pérdida de carga. ¿De qué variables depende y por qué crece con la longitud de cañería?" },
+    { c: "integracion", t: "¿Por qué el dimensionamiento inicial subestimó la bomba? Formulá la corrección conceptual necesaria." }
+  ],
+  integradora: { eje: "C", t: "Interpretá cada término de Bernoulli como una forma de energía por unidad de volumen y relacioná la ecuación con la conservación de la energía mecánica." }
+},
+{
+  id: "T-29", eje: "F", titulo: "Venturi en proceso industrial",
+  temas: ["Continuidad", "Medición de caudal"],
+  situacion: "Un caudalímetro Venturi mide el caudal de una línea de proceso a partir de la diferencia de presión entre la sección amplia y la garganta. Un operario cuestiona el instrumento porque considera contradictorio que la presión disminuya justo donde el fluido va más rápido.",
+  resultados: ["Integrar la ecuación de continuidad con la ecuación de Bernoulli", "Fundamentar el principio de funcionamiento de un instrumento de medición"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá la ecuación de continuidad. ¿Qué principio de conservación expresa y qué hipótesis requiere sobre el fluido?" },
+    { c: "conceptual", t: "Resolvé la objeción del operario: ¿por qué la presión cae donde la velocidad aumenta? Fundamentá con Bernoulli." },
+    { c: "modelizacion", t: "Planteá conjuntamente continuidad y Bernoulli entre la sección amplia y la garganta, y explicá cómo se llega al caudal a partir de la diferencia de presión." },
+    { c: "modelizacion", t: "¿Qué hipótesis del modelo ideal se apartan del comportamiento real y cómo se corrigen en la práctica?" },
+    { c: "comunicacion", t: "Explicá el funcionamiento del instrumento al operario, en términos técnicos y sin ecuaciones, en no más de tres frases." }
+  ],
+  integradora: { eje: "A", t: "¿Cómo se vincula el caudal volumétrico con la velocidad media del fluido? Interpretalo como un problema cinemático." }
+},
+{
+  id: "T-30", eje: "F", titulo: "Sustentación de aeronaves",
+  temas: ["Bernoulli", "Aplicaciones tecnológicas"],
+  situacion: "Un ala de aeronave genera sustentación. Una explicación habitual sostiene que las partículas de aire que se separan en el borde de ataque deben reencontrarse simultáneamente en el borde de fuga, lo que obligaría al aire superior a ir más rápido. Mediciones experimentales muestran que ese reencuentro simultáneo no ocurre.",
+  resultados: ["Aplicar la ecuación de Bernoulli a un fenómeno tecnológico complejo", "Evaluar críticamente explicaciones físicas de uso corriente"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá la relación entre velocidad y presión en un flujo según Bernoulli, y cómo se vincula con la fuerza de sustentación." },
+    { c: "conceptual", t: "Analizá críticamente la explicación del reencuentro simultáneo. ¿Qué hipótesis introduce que no está justificada?" },
+    { c: "modelizacion", t: "¿Qué rol cumple el ángulo de ataque y la deflexión de la corriente de aire? Relacionalo con la Tercera Ley de Newton." },
+    { c: "modelizacion", t: "¿Qué hipótesis de Bernoulli son cuestionables en el flujo alrededor de un ala real?" },
+    { c: "integracion", t: "Planteá la sustentación como un problema de cantidad de movimiento del aire deflectado. ¿Ambos enfoques son compatibles?" }
+  ],
+  integradora: { eje: "D", t: "Si el ala deflecta hacia abajo una masa de aire por unidad de tiempo, ¿cómo obtenés la fuerza de sustentación mediante el teorema del impulso?" }
+},
+
+/* ─────────────────────── TRANSVERSALES PAAA 2026 ─────────────────────── */
+{
+  id: "T-31", eje: "T", titulo: "Parque eólico",
+  temas: ["Dinámica", "Energía", "Rotación"],
+  integra: ["B", "C", "E"],
+  situacion: "Un parque eólico en el sur mendocino evalúa su desempeño. El operador observa que por debajo de cierta velocidad de viento las máquinas no arrancan, que por encima de otra velocidad el sistema las frena deliberadamente, y que la potencia entregada no crece indefinidamente con el viento.",
+  resultados: ["Integrar dinámica, energía y rotación en el análisis de un sistema tecnológico", "Justificar criterios operativos a partir de múltiples principios físicos"],
+  preguntas: [
+    { c: "conceptual", t: "Describí la cadena de conversión energética completa del aerogenerador e identificá la forma de energía presente en cada etapa." },
+    { c: "conceptual", t: "¿Por qué existe una velocidad mínima de arranque? Fundamentá en términos de torque y de fuerzas resistentes en el eje." },
+    { c: "modelizacion", t: "Planteá el torque que el viento ejerce sobre el rotor y la condición dinámica de arranque. ¿Qué hipótesis adoptás sobre la distribución de fuerzas en las palas?" },
+    { c: "modelizacion", t: "Explicá por qué la potencia depende del cubo de la velocidad del viento y por qué el sistema limita la potencia por encima de la velocidad nominal." },
+    { c: "integracion", t: "Vinculá tres unidades del programa en este dispositivo: señalá qué aporta la dinámica, qué la energía y qué la rotación al análisis." }
+  ],
+  integradora: { eje: "F", t: "El viento es un fluido en movimiento. ¿Qué conceptos de la unidad de fluidos intervienen en el flujo alrededor de las palas?" }
+},
+{
+  id: "T-32", eje: "T", titulo: "Planta de bombeo",
+  temas: ["Energía", "Fluidos", "Potencia"],
+  integra: ["C", "F"],
+  situacion: "Una planta de bombeo para riego eleva agua desde un canal hasta una cota superior y la distribuye por una red de cañerías. El consumo eléctrico medido supera lo previsto y la gerencia técnica debe determinar si el problema es de dimensionamiento, de pérdidas en la red o de rendimiento del equipo.",
+  resultados: ["Integrar balance energético, hidráulica y potencia en un sistema real", "Diagnosticar el desempeño de una instalación a partir de principios físicos"],
+  preguntas: [
+    { c: "conceptual", t: "Planteá el balance energético completo del sistema: qué energía entra, qué energía útil se obtiene y dónde se pierde." },
+    { c: "conceptual", t: "Definí altura manométrica total y distinguí la altura geométrica de las pérdidas de carga." },
+    { c: "modelizacion", t: "Aplicá Bernoulli con pérdidas entre el canal y el punto de entrega. ¿Qué términos son relevantes en este caso?" },
+    { c: "modelizacion", t: "Deducí la potencia hidráulica útil en función de caudal y altura, y vinculala con la potencia eléctrica consumida mediante el rendimiento." },
+    { c: "integracion", t: "Proponé un criterio físico para discriminar entre las tres causas posibles del sobreconsumo." }
+  ],
+  integradora: { eje: "B", t: "¿Qué fuerzas actúan sobre una partícula de fluido en la cañería y por qué el flujo se mantiene estacionario pese a la existencia de rozamiento?" }
+},
+{
+  id: "T-33", eje: "T", titulo: "Vehículo eléctrico",
+  temas: ["Dinámica", "Energía", "Rendimiento"],
+  integra: ["B", "C"],
+  situacion: "Un vehículo eléctrico declara una autonomía de catálogo que rara vez se alcanza en uso real. El fabricante señala que la autonomía depende del estilo de conducción, de la velocidad sostenida y de la topografía del recorrido. En trayectos urbanos con frenado regenerativo el consumo baja respecto de la ruta a velocidad constante.",
+  resultados: ["Integrar dinámica y energía en el análisis del consumo de un vehículo", "Interpretar el rendimiento global de una cadena de conversión"],
+  preguntas: [
+    { c: "conceptual", t: "Enumerá las fuerzas resistentes que debe vencer el vehículo en marcha e indicá de qué depende cada una." },
+    { c: "conceptual", t: "Explicá por qué a velocidad de ruta el consumo por kilómetro es mayor que en ciudad, pese a que en ciudad hay más frenadas." },
+    { c: "modelizacion", t: "Planteá el balance de energía por kilómetro recorrido en régimen estacionario. ¿Qué hipótesis adoptás sobre el perfil de velocidad?" },
+    { c: "modelizacion", t: "Modelizá el frenado regenerativo: ¿qué fracción de la energía cinética es recuperable y qué la limita físicamente?" },
+    { c: "integracion", t: "Integrá dinámica y energía: mostrá cómo una fuerza resistente se traduce en consumo energético y en pérdida de autonomía." }
+  ],
+  integradora: { eje: "A", t: "Interpretá el perfil de velocidad de un ciclo urbano normalizado a partir de su gráfico v-t e indicá qué información cinemática aporta." }
+},
+{
+  id: "T-34", eje: "T", titulo: "Parque solar con seguimiento",
+  temas: ["Rotación", "Energía", "Control de sistemas"],
+  integra: ["C", "E"],
+  situacion: "Un parque solar incorpora seguidores de un eje que orientan los paneles siguiendo la trayectoria aparente del sol. El sistema aumenta la captación diaria de energía, pero consume energía para mover las estructuras y debe resistir el torque que el viento ejerce sobre la superficie de los paneles.",
+  resultados: ["Integrar rotación y energía en un sistema de control mecánico", "Evaluar el balance neto de una solución tecnológica"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá por qué la energía captada depende del ángulo entre la superficie del panel y la dirección de la radiación." },
+    { c: "conceptual", t: "Definí torque y explicá por qué el viento constituye la solicitación crítica de diseño del seguidor." },
+    { c: "modelizacion", t: "Planteá el equilibrio de momentos de la estructura del seguidor bajo carga de viento. ¿Qué hipótesis adoptás sobre la distribución de presión?" },
+    { c: "modelizacion", t: "Modelizá el balance neto: energía adicional captada menos energía consumida por el accionamiento. ¿Qué variables lo definen?" },
+    { c: "integracion", t: "Integrá rotación, energía y criterios de control: ¿bajo qué condiciones conviene poner los paneles en posición de bandera?" }
+  ],
+  integradora: { eje: "F", t: "¿Cómo estimarías la fuerza que el viento ejerce sobre la superficie del panel a partir de conceptos de fluidos?" }
+},
+{
+  id: "T-35", eje: "T", titulo: "Puente carretero",
+  temas: ["Fuerzas", "Equilibrio", "Aplicaciones ingenieriles"],
+  integra: ["B", "E"],
+  situacion: "Un puente carretero de tramo simple debe verificarse para el paso de un transporte especial. El proyectista analiza las reacciones en los apoyos para distintas posiciones del vehículo sobre el tablero y comprueba que la reacción máxima no ocurre con el vehículo en el centro.",
+  resultados: ["Aplicar las condiciones de equilibrio de cuerpo rígido a una estructura", "Analizar la influencia de la posición de la carga sobre las reacciones"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá las condiciones de equilibrio de un cuerpo rígido y explicá por qué ambas son necesarias en una estructura." },
+    { c: "conceptual", t: "Explicá qué es una reacción de vínculo y qué diferencia hay entre un apoyo fijo y uno móvil en términos de las fuerzas que pueden transmitir." },
+    { c: "modelizacion", t: "Planteá el diagrama de cuerpo libre del tablero con el vehículo en una posición genérica y escribí las ecuaciones de equilibrio." },
+    { c: "modelizacion", t: "Determiná conceptualmente en qué posición del vehículo se maximiza cada reacción. Justificá a partir del balance de momentos." },
+    { c: "integracion", t: "¿Qué hipótesis simplificatorias del modelo estático se apartan del comportamiento real de un vehículo en movimiento?" }
+  ],
+  integradora: { eje: "C", t: "Un vehículo pesado que cruza el puente a velocidad genera efectos dinámicos. ¿Qué energía interviene y por qué las normas aplican un coeficiente de impacto?" }
+},
+{
+  id: "T-36", eje: "T", titulo: "Sistema de seguridad automotriz",
+  temas: ["Impulso", "Energía", "Modelización"],
+  integra: ["C", "D"],
+  situacion: "Un vehículo incorpora tres dispositivos de seguridad pasiva: zona de deformación programada, cinturón con pretensor y airbag. Los tres actúan en instantes distintos de una misma colisión y, según el fabricante, responden a un mismo principio físico aplicado de tres maneras.",
+  resultados: ["Integrar impulso y energía en el análisis de un sistema de seguridad", "Fundamentar decisiones de diseño mediante más de un modelo físico"],
+  preguntas: [
+    { c: "conceptual", t: "Enunciá el teorema del impulso y la cantidad de movimiento y el teorema del trabajo y la energía cinética. ¿Qué variable independiente gobierna cada uno?" },
+    { c: "conceptual", t: "Identificá el principio común a los tres dispositivos y explicá cómo lo aplica cada uno." },
+    { c: "modelizacion", t: "Modelizá al ocupante como un cuerpo que debe pasar de la velocidad de impacto al reposo. ¿Qué magnitud querés minimizar y cuál está fijada por el choque?" },
+    { c: "modelizacion", t: "¿Qué hipótesis adoptás sobre el sistema durante el impacto y por qué es lícito despreciar fuerzas externas como el rozamiento?" },
+    { c: "integracion", t: "Analizá la misma colisión desde la cantidad de movimiento y desde la energía. ¿Qué información aporta cada enfoque que el otro no da?" }
+  ],
+  integradora: { eje: "A", t: "Reconstruí la cinemática del impacto: ¿qué desaceleración media soporta el ocupante y de qué datos la obtenés?" }
+},
+{
+  id: "T-37", eje: "T", titulo: "Montaña rusa",
+  temas: ["Cinemática", "Dinámica", "Energía"],
+  integra: ["A", "B", "C"],
+  situacion: "El proyectista de una montaña rusa debe verificar que el carro complete el rizo vertical sin depender de la fijación a la vía y, simultáneamente, que la aceleración soportada por los pasajeros no exceda el límite fisiológico admitido por la normativa del parque.",
+  resultados: ["Integrar cinemática, dinámica y energía en el análisis de un mismo sistema", "Verificar condiciones de diseño a partir de criterios físicos simultáneos"],
+  preguntas: [
+    { c: "conceptual", t: "Explicá qué condición física debe cumplirse en el punto más alto del rizo para que el carro no se despegue de la vía." },
+    { c: "conceptual", t: "Analizá qué siente el pasajero en el punto más bajo y en el más alto del rizo en términos de peso aparente." },
+    { c: "modelizacion", t: "Planteá conservación de la energía entre el punto de partida y el punto más alto del rizo, y el diagrama de cuerpo libre en ese punto." },
+    { c: "modelizacion", t: "Deducí la altura mínima de partida necesaria. ¿Qué hipótesis adoptaste y cómo la corregirías por rozamiento?" },
+    { c: "integracion", t: "Mostrá cómo este único problema exige cinemática, dinámica y energía de manera simultánea, y qué aporta cada una." }
+  ],
+  integradora: { eje: "D", t: "Si el carro es frenado al final del recorrido por un sistema de fricción, analizá la maniobra desde el impulso y desde la energía." }
+},
+{
+  id: "T-38", eje: "T", titulo: "Aerogenerador offshore",
+  temas: ["Fluidos", "Rotación", "Energía"],
+  integra: ["C", "E", "F"],
+  situacion: "Un aerogenerador marino está sometido simultáneamente a la acción del viento sobre las palas y al oleaje sobre la estructura de soporte. El proyecto debe verificar la estabilidad de la fundación, la resistencia del eje y el rendimiento energético del conjunto.",
+  resultados: ["Integrar fluidos, rotación y energía en un sistema tecnológico complejo", "Analizar solicitaciones de distinta naturaleza sobre una misma estructura"],
+  preguntas: [
+    { c: "conceptual", t: "Distinguí las dos solicitaciones fluidas presentes: la del aire sobre las palas y la del agua sobre la estructura. ¿Qué conceptos de fluidos describe cada una?" },
+    { c: "conceptual", t: "Explicá por qué la fuerza del oleaje genera un momento de vuelco sobre la fundación y de qué depende su magnitud." },
+    { c: "modelizacion", t: "Planteá el equilibrio de momentos de la estructura respecto del punto crítico de la fundación, incluyendo empuje, peso y cargas de viento y oleaje." },
+    { c: "modelizacion", t: "Enunciá el principio de Arquímedes y explicá qué rol cumple en la estructura de soporte." },
+    { c: "integracion", t: "Integrá los tres ejes: señalá qué aporta fluidos, qué rotación y qué energía al análisis de este aerogenerador." }
+  ],
+  integradora: { eje: "B", t: "Planteá el diagrama de cuerpo libre completo de la estructura e identificá las fuerzas externas presentes." }
+},
+{
+  id: "T-39", eje: "T", titulo: "Planta hidroeléctrica",
+  temas: ["Fluidos", "Potencia", "Conservación de energía"],
+  integra: ["C", "F"],
+  situacion: "Una central con embalse debe decidir su régimen de operación diario. Puede turbinar de manera continua o concentrar la generación en las horas de mayor demanda. Además, evalúa incorporar bombeo nocturno para elevar agua al embalse superior y volver a turbinarla al día siguiente.",
+  resultados: ["Integrar hidráulica y balance energético en la operación de un sistema", "Analizar el almacenamiento de energía mediante un modelo físico"],
+  preguntas: [
+    { c: "conceptual", t: "Describí la cadena de transformaciones energéticas de la central e identificá dónde se almacena energía y en qué forma." },
+    { c: "conceptual", t: "Explicá por qué un sistema de bombeo y turbinado siempre devuelve menos energía de la que consume. ¿Por qué entonces es útil?" },
+    { c: "modelizacion", t: "Aplicá Bernoulli entre la superficie del embalse y la entrada de la turbina. ¿Qué término se convierte en cuál a lo largo de la tubería forzada?" },
+    { c: "modelizacion", t: "Deducí la potencia disponible en función del caudal y el salto, y explicitá las hipótesis del modelo." },
+    { c: "integracion", t: "Integrá fluidos y energía: mostrá cómo la altura del embalse se traduce en potencia eléctrica y qué rendimientos intervienen." }
+  ],
+  integradora: { eje: "E", t: "La turbina y el generador son cuerpos que rotan. ¿Cómo se vincula la potencia con el torque y la velocidad angular del eje?" }
+},
+{
+  id: "T-40", eje: "T", titulo: "Sistema de elevación industrial",
+  temas: ["Dinámica", "Trabajo", "Rendimiento"],
+  integra: ["B", "C"],
+  situacion: "Un puente grúa de nave industrial eleva una carga, la traslada horizontalmente y la deposita. El área de energía advierte que el consumo del equipo es alto y propone recuperar energía durante el descenso de la carga, como hace el frenado regenerativo de un vehículo eléctrico.",
+  resultados: ["Integrar dinámica y balance energético en un equipo de elevación", "Evaluar técnicamente una propuesta de mejora energética"],
+  preguntas: [
+    { c: "conceptual", t: "Analizá qué trabajo realiza el motor en cada una de las tres fases de la operación. ¿En cuál el trabajo es nulo y por qué?" },
+    { c: "conceptual", t: "¿Por qué el traslado horizontal a velocidad constante no requiere trabajo contra el peso pero sí consume energía?" },
+    { c: "modelizacion", t: "Planteá el diagrama de cuerpo libre de la carga durante el arranque del ascenso y escribí la ecuación de Newton." },
+    { c: "modelizacion", t: "Modelizá el balance energético del ciclo completo, identificando energía útil y pérdidas en cada fase." },
+    { c: "integracion", t: "Evaluá la propuesta del área de energía: ¿es físicamente viable recuperar energía en el descenso? ¿Qué la limita?" }
+  ],
+  integradora: { eje: "A", t: "Describí el movimiento de la carga durante el traslado horizontal con arranque y frenado, y esquematizá su gráfico v-t." }
+}
+];
+
+</script>
+<script>
+(function(){
+  "use strict";
+  const $ = (s,r)=> (r||document).querySelector(s);
+  const $$ = (s,r)=> Array.from((r||document).querySelectorAll(s));
+  const byId = id => TARJETAS.find(t=>t.id===id);
+  const critById = id => RUBRICA.find(c=>c.id===id);
+
+  let actual = byId("T-09");
+  let pasoAbierto = 2;
+  let scores = {};
+
+  /* ── banco ── */
+  const orden = ["A","B","C","D","E","F","T"];
+  $("#grupos").innerHTML = orden.map(k=>{
+    const e = EJES[k];
+    const items = TARJETAS.filter(t=>t.eje===k).map(t=>
+      `<button class="chip" data-id="${t.id}" aria-current="false"><code>${t.id}</code><span>${t.titulo}</span></button>`
+    ).join("");
+    return `<div class="ejegroup" data-eje="${k}">
+      <div class="ejehead"><span class="n">${e.tag}</span><span class="t">${e.nombre}</span></div>
+      <div class="chips">${items}</div>
+    </div>`;
+  }).join("");
+
+  $("#grupos").addEventListener("click", ev=>{
+    const b = ev.target.closest(".chip");
+    if(b) seleccionar(b.dataset.id);
+  });
+
+  $("#explorar").addEventListener("click", e=>{
+    const open = e.currentTarget.getAttribute("aria-pressed")==="true";
+    e.currentTarget.setAttribute("aria-pressed", String(!open));
+    $("#banco").hidden = open;
+    if(!open) $("#banco").scrollIntoView({behavior:"smooth", block:"nearest"});
+  });
+
+  $("#sortear").addEventListener("click", ()=>{
+    let t; do { t = TARJETAS[Math.floor(Math.random()*TARJETAS.length)]; }
+    while(TARJETAS.length>1 && t.id===actual.id);
+    seleccionar(t.id);
+  });
+
+  /* ── cronograma ── */
+  const totalSec = PROTOCOLO.reduce((a,p)=>a+(p.dur||0),0);
+  $("#band").innerHTML = PROTOCOLO.filter(p=>p.dur).map(p=>
+    `<i style="width:${(p.dur/totalSec*100).toFixed(1)}%;background:var(--eje);opacity:${p.paso===3?1:.45}"></i>`
+  ).join("");
+
+  function pintarPasos(){
+    $("#steps").innerHTML = PROTOCOLO.map(p=>`
+      <li><button class="step" data-paso="${p.paso}" aria-expanded="${p.paso===pasoAbierto}">
+        <span class="num">${p.paso}</span>
+        <span class="ttl">${p.titulo}</span>
+        <span class="dur">${p.durTexto}</span>
+        <span class="detail">${p.estudiante}</span>
+      </button></li>`).join("");
+  }
+  $("#steps").addEventListener("click", ev=>{
+    const b = ev.target.closest(".step");
+    if(!b) return;
+    pasoAbierto = Number(b.dataset.paso);
+    pintarPasos();
+    prepararTimer();
+  });
+
+  /* ── timer ── */
+  let restante = 120, corriendo = false, handle = null;
+  function fmt(s){
+    const neg = s<0, a = Math.abs(s);
+    return (neg?"+":"") + String(Math.floor(a/60)).padStart(2,"0") + ":" + String(a%60).padStart(2,"0");
+  }
+  function pintarClock(){
+    const c = $("#clock");
+    c.textContent = fmt(restante);
+    c.classList.toggle("over", restante<0);
+  }
+  function prepararTimer(){
+    detener();
+    const p = PROTOCOLO.find(x=>x.paso===pasoAbierto);
+    const t = $("#timer");
+    if(!p.dur){
+      t.style.display = "none";
+      return;
+    }
+    t.style.display = "flex";
+    restante = p.dur;
+    $("#tlbl").textContent = p.titulo + (p.paso===3 ? " — el mínimo reglamentario son 5 minutos" : "");
+    pintarClock();
+  }
+  function detener(){
+    corriendo = false; clearInterval(handle); handle = null;
+    $("#play").textContent = "Iniciar";
+  }
+  $("#play").addEventListener("click", ()=>{
+    if(corriendo){ detener(); return; }
+    corriendo = true;
+    $("#play").textContent = "Pausar";
+    handle = setInterval(()=>{ restante--; pintarClock(); }, 1000);
+  });
+  $("#reset").addEventListener("click", prepararTimer);
+
+  /* ── rúbrica ── */
+  const sugerido = (max, nivel) =>
+    nivel==="excelente" ? max : nivel==="adecuado" ? Math.round(max*0.6*2)/2 : 0;
+
+  function pintarRubrica(){
+    $("#rubrica").innerHTML = RUBRICA.map(c=>{
+      const s = scores[c.id];
+      const val = s ? s.pts : null;
+      return `<div class="crit" data-crit="${c.id}">
+        <div class="crit-head">
+          <span class="name">${c.criterio}</span>
+          <span class="max">máx. ${c.puntaje}</span>
+          <span class="score">${val===null?"—":val.toFixed(1).replace(".0","")}</span>
+        </div>
+        <div class="levels">
+          ${["excelente","adecuado","insuficiente"].map(n=>`
+            <button class="level" data-nivel="${n}" aria-pressed="${s&&s.nivel===n}">
+              <span class="lv">${n}</span>
+              <span class="desc">${c[n]}</span>
+            </button>`).join("")}
+        </div>
+      </div>`;
+    }).join("");
+    const cargados = Object.keys(scores).length;
+    $("#total").textContent = cargados===0 ? "—" :
+      Object.values(scores).reduce((a,s)=>a+s.pts,0).toFixed(1).replace(".0","");
+  }
+  $("#rubrica").addEventListener("click", ev=>{
+    const b = ev.target.closest(".level");
+    if(!b) return;
+    const id = b.closest(".crit").dataset.crit;
+    const nivel = b.dataset.nivel;
+    if(scores[id] && scores[id].nivel===nivel) delete scores[id];
+    else scores[id] = { nivel, pts: sugerido(critById(id).puntaje, nivel) };
+    pintarRubrica();
+  });
+  $("#limpiar").addEventListener("click", ()=>{ scores = {}; pintarRubrica(); });
+
+  /* ── selección de tarjeta ── */
+  function seleccionar(id){
+    actual = byId(id) || actual;
+    scores = {};
+    pasoAbierto = 2;
+    render();
+  }
+
+  function render(){
+    const t = actual, e = EJES[t.eje];
+    document.documentElement.setAttribute("data-eje", t.eje);
+    $$("[data-eje]").forEach(n=>{ if(n.classList.contains("pane")||n.classList.contains("tarjeta")) n.setAttribute("data-eje", t.eje); });
+    $("#pane-estudiante").setAttribute("data-eje", t.eje);
+    $("#pane-tribunal").setAttribute("data-eje", t.eje);
+
+    $("#now").innerHTML = `Tarjeta en pantalla &nbsp;<b>${t.id}</b>&nbsp; · &nbsp;${e.tag}`;
+    $$(".chip").forEach(c=> c.setAttribute("aria-current", String(c.dataset.id===t.id)));
+
+    const ejeTexto = t.eje==="T"
+      ? `Transversal PAAA 2026 — integra ${t.integra.map(k=>EJES[k].nombre.toLowerCase()).join(", ")}`
+      : `${e.tag} — ${e.nombre}`;
+
+    [["#t-est",true],["#t-trib",false]].forEach(([sel,full])=>{
+      const el = $(sel);
+      el.setAttribute("data-eje", t.eje);
+      $("code",el).textContent = t.id;
+      $(".ejelabel",el).textContent = ejeTexto;
+      $("h3",el).textContent = t.titulo;
+      if(full){
+        $(".situacion",el).textContent = t.situacion;
+        $(".temas",el).innerHTML = t.temas.map(x=>`<li>${x}</li>`).join("");
+      }
+    });
+
+    $("#recap").textContent = t.situacion;
+    $("#resultados").innerHTML = t.resultados.map(r=>`<li>${r}</li>`).join("");
+
+    $("#preguntas").innerHTML = RUBRICA.map(c=>{
+      const qs = t.preguntas.filter(q=>q.c===c.id);
+      if(!qs.length) return "";
+      return `<div class="qgroup">
+        <div class="qhead"><span class="cr">${c.criterio}</span><span class="pts">${c.puntaje} pt${c.puntaje>1?"s":""}</span><span class="rule"></span></div>
+        <ul class="qlist">${qs.map(q=>`<li>${q.t}</li>`).join("")}</ul>
+      </div>`;
+    }).join("");
+
+    const ie = EJES[t.integradora.eje];
+    $("#integradora p").textContent = t.integradora.t;
+    $("#integradora .src").textContent = `Procedencia: ${ie.tag} — ${ie.nombre}`;
+
+    pintarPasos();
+    prepararTimer();
+    pintarRubrica();
+  }
+
+  /* ── tabs (angosto) ── */
+  $$(".tabs button").forEach(b=> b.addEventListener("click", ()=>{
+    $$(".tabs button").forEach(x=> x.setAttribute("aria-selected", String(x===b)));
+    $("#split").dataset.pane = b.dataset.pane;
+  }));
+
+  render();
+})();
+</script>
+
+<script>
+(function(){
+  var root = document.documentElement, KEY = "fisica1-tema";
+  function aplicar(v){ if(v) root.setAttribute("data-theme", v); else root.removeAttribute("data-theme"); }
+  try { aplicar(localStorage.getItem(KEY)); } catch(e){}
+  document.getElementById("tema").addEventListener("click", function(){
+    var oscuroAhora = root.getAttribute("data-theme")
+      ? root.getAttribute("data-theme") === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var v = oscuroAhora ? "light" : "dark";
+    aplicar(v);
+    try { localStorage.setItem(KEY, v); } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
