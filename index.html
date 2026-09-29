@@ -117,6 +117,115 @@ button{font:inherit; cursor:pointer; border-radius:3px}
 }
 .now b{color:var(--eje); font-weight:600}
 
+/* ─────────────── navegación de vistas ─────────────── */
+.nav{display:flex; gap:26px; margin:2px 0 0; border-bottom:1px solid var(--rule)}
+.nav button{
+  border:0; background:none; padding:0 0 11px; margin-bottom:-1px; border-radius:0;
+  font-family:var(--f-sans); font-size:14px; font-weight:500; color:var(--muted);
+  border-bottom:2px solid transparent; transition:color .12s ease, border-color .12s ease;
+}
+.nav button:hover{color:var(--ink)}
+.nav button[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--steel); font-weight:600}
+#vista-proyecto[hidden], #vista-dispositivo[hidden]{display:none!important}
+
+/* ─────────────── vista proyecto ─────────────── */
+#vista-proyecto{max-width:820px; padding-top:34px}
+.lede{
+  font-family:var(--f-display); font-size:clamp(19px,2.5vw,23px); line-height:1.45;
+  color:var(--ink); margin:0 0 16px; text-wrap:pretty;
+}
+.lede strong{font-weight:600}
+.lede-2{font-size:15.5px; line-height:1.62; color:var(--ink-2); margin:0; max-width:66ch}
+
+.blk{margin-top:46px}
+.blk h2{
+  font-family:var(--f-display); font-size:20px; font-weight:600; margin:0 0 14px;
+  padding-bottom:9px; border-bottom:1px solid var(--rule);
+}
+.blk-intro{font-size:14.5px; line-height:1.62; color:var(--ink-2); margin:0 0 20px; max-width:64ch}
+.nota-blk{
+  font-size:13.5px; line-height:1.58; color:var(--muted); margin:18px 0 0;
+  border-left:2px solid var(--rule-2); padding-left:13px; max-width:62ch;
+}
+.nota-blk em{font-style:italic; color:var(--ink-2)}
+
+/* antes / después */
+.antes-despues{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+.ad{border:1px solid var(--rule); border-radius:3px; padding:16px 17px; background:var(--surface)}
+.ad-antes{background:var(--surface-2)}
+.ad-despues{border-left:3px solid var(--steel)}
+.ad-tag{
+  font-family:var(--f-mono); font-size:9.5px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--muted); display:block; margin-bottom:10px; font-weight:600;
+}
+.ad-despues .ad-tag{color:var(--steel)}
+.ad ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px}
+.ad li{font-size:13.5px; line-height:1.5; color:var(--ink-2); padding-left:14px; position:relative}
+.ad li::before{content:"–"; position:absolute; left:0; color:var(--faint)}
+
+/* franja de tiempos */
+.mini-band{display:flex; gap:2px; height:9px; margin-bottom:18px}
+.mini-band i{display:block; border-radius:1px; background:var(--steel)}
+.pasos-exp{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1px}
+.pasos-exp li{
+  display:grid; grid-template-columns:22px 1fr auto; gap:13px; align-items:baseline;
+  padding:10px 2px; border-bottom:1px solid var(--rule);
+}
+.pasos-exp li:last-child{border-bottom:0}
+.pasos-exp .n{font-family:var(--f-mono); font-size:11px; font-weight:600; color:var(--muted)}
+.pasos-exp .tx b{font-size:14px; font-weight:600; display:block; margin-bottom:2px}
+.pasos-exp .tx span{font-size:13.5px; line-height:1.5; color:var(--ink-2)}
+.pasos-exp .d{
+  font-family:var(--f-mono); font-size:11.5px; color:var(--muted); white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+
+/* composición del banco */
+.ejes-exp{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px}
+.ejes-exp li{
+  display:grid; grid-template-columns:3px 1fr auto; gap:0 14px; align-items:center;
+  padding:9px 0 9px 0;
+}
+.ejes-exp .rail{background:var(--eje); align-self:stretch; border-radius:1px}
+.ejes-exp .nm{font-size:14px; font-weight:500; padding-left:11px}
+.ejes-exp .nm small{
+  display:block; font-family:var(--f-mono); font-size:10px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--eje); font-weight:600; margin-bottom:2px;
+}
+.ejes-exp .ct{
+  font-family:var(--f-mono); font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums;
+}
+
+/* medidor de rúbrica */
+.rub-meter{display:flex; gap:2px; height:30px; margin-bottom:12px}
+.rub-meter i{display:block; border-radius:2px; position:relative}
+.rub-leyenda{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px 22px}
+.rub-leyenda li{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-2)}
+.rub-leyenda .sw{width:11px; height:11px; border-radius:2px; flex:none}
+.rub-leyenda b{font-family:var(--f-mono); font-size:12px; color:var(--ink); font-variant-numeric:tabular-nums}
+
+/* cómo usar */
+.uso{display:flex; flex-direction:column; gap:14px}
+.uso-item{display:grid; grid-template-columns:26px 1fr; gap:13px; align-items:start}
+.uso-n{
+  font-family:var(--f-mono); font-size:11px; font-weight:600; color:var(--muted);
+  border:1px solid var(--rule-2); border-radius:50%; width:24px; height:24px;
+  display:grid; place-items:center; line-height:1;
+}
+.uso-item div{font-size:14px; line-height:1.58; color:var(--ink-2); max-width:62ch}
+.uso-item b{color:var(--ink); font-weight:600}
+.uso-item em{font-style:normal; font-family:var(--f-mono); font-size:12.5px; color:var(--ink)}
+.cta-wrap{margin:26px 0 0}
+.btn-lg{padding:11px 20px; font-size:14.5px}
+
+.blk-estado p{font-size:13.5px; line-height:1.62; color:var(--muted); margin:0 0 12px; max-width:66ch}
+.blk-estado strong{color:var(--ink-2); font-weight:600}
+
+@media (max-width:640px){
+  .antes-despues{grid-template-columns:1fr}
+  .rub-meter{height:24px}
+}
+
 /* ─────────────── banco ─────────────── */
 .banco{border-top:1px solid var(--rule); background:var(--surface-2)}
 .banco[hidden]{display:none!important}
@@ -334,7 +443,13 @@ footer .sig{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.06em; t
     </div>
     <h1>Examen Final Oral Integrador</h1>
     <p class="subtitle">Dispositivo de consulta del Banco Oficial de 40 Tarjetas de Evaluación Integradora. Una misma tarjeta, dos vistas: lo que recibe el estudiante y lo que conduce el tribunal. <em>Anexo I y II — Proyecto institucional 2026.</em></p>
-    <div class="toolbar">
+
+    <nav class="nav" role="tablist" aria-label="Secciones">
+      <button role="tab" id="nav-proyecto" data-vista="proyecto" aria-selected="true" aria-controls="vista-proyecto">El proyecto</button>
+      <button role="tab" id="nav-dispositivo" data-vista="dispositivo" aria-selected="false" aria-controls="vista-dispositivo">El dispositivo</button>
+    </nav>
+
+    <div class="toolbar" id="toolbar" hidden>
       <button class="btn btn-primary" id="sortear"><span class="dice">◇</span> Sortear tarjeta</button>
       <button class="btn" id="explorar" aria-pressed="false" aria-controls="banco">Explorar banco</button>
       <button class="btn" id="tema" title="Cambiar entre tema claro y oscuro">
@@ -354,6 +469,100 @@ footer .sig{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.06em; t
 </section>
 
 <main class="wrap">
+
+<!-- ═════════════════ VISTA: EL PROYECTO ═════════════════ -->
+<section id="vista-proyecto" role="tabpanel" aria-labelledby="nav-proyecto">
+
+  <p class="lede">Física I dejó de tomar examen final con bolillero. En lugar de sortear un tema del programa y pedir que se exponga, ahora se sortea una <strong>situación física real de la ingeniería</strong> y se evalúa qué puede hacer el estudiante con ella: si la entiende, si la sabe modelizar, si la conecta con el resto del programa y si la sabe explicar.</p>
+  <p class="lede-2">Esta pantalla es el dispositivo de consulta de ese banco: permite ver, para cualquiera de las 40 tarjetas, exactamente qué recibe el estudiante y exactamente con qué la evalúa el tribunal.</p>
+
+  <section class="blk">
+    <h2>Qué cambia respecto del bolillero</h2>
+    <div class="antes-despues">
+      <div class="ad ad-antes">
+        <span class="ad-tag">Sistema anterior</span>
+        <ul>
+          <li>Se sorteaba un tema aislado del programa.</li>
+          <li>El azar irrestricto hacía que dos estudiantes rindieran exámenes de dificultad muy distinta.</li>
+          <li>Algunas unidades —fluidos entre ellas— casi nunca salían sorteadas.</li>
+          <li>Las preguntas las improvisaba cada tribunal.</li>
+        </ul>
+      </div>
+      <div class="ad ad-despues">
+        <span class="ad-tag">Dispositivo actual</span>
+        <ul>
+          <li>Se sortea una situación física contextualizada en un problema de ingeniería.</li>
+          <li>Las 40 tarjetas están construidas sobre la misma estructura y la misma rúbrica.</li>
+          <li>Cada unidad del programa tiene presencia garantizada en el banco.</li>
+          <li>Cada tarjeta trae sus preguntas guía escritas de antemano.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="nota-blk">El cambio de fondo: se pasa de evaluar <em>cuánto se acuerda</em> a evaluar <em>qué puede resolver</em>. Es lo que el modelo educativo de la UTN llama evaluación por competencias.</p>
+  </section>
+
+  <section class="blk">
+    <h2>Cómo se toma el examen</h2>
+    <p class="blk-intro">Cinco pasos, entre 10 y 12 minutos por estudiante sin contar la deliberación del tribunal. Ese tiempo acotado es lo que hace viable una mesa de alta concurrencia.</p>
+    <div class="mini-band" id="mini-band" aria-hidden="true"></div>
+    <ol class="pasos-exp" id="pasos-exp"></ol>
+  </section>
+
+  <section class="blk">
+    <h2>Qué contiene el banco</h2>
+    <p class="blk-intro">Cuarenta tarjetas: cinco por cada eje temático del programa analítico, más diez tarjetas transversales que obligan a integrar varias unidades a la vez.</p>
+    <ul class="ejes-exp" id="ejes-exp"></ul>
+    <p class="nota-blk">Cada tarjeta lleva la situación física, los temas del programa que toca, los resultados de aprendizaje a verificar, cinco preguntas guía y una pregunta integradora obligatoria de un eje distinto al suyo.</p>
+  </section>
+
+  <section class="blk">
+    <h2>Cómo se califica</h2>
+    <p class="blk-intro">Una rúbrica única de 10 puntos, igual para las 40 tarjetas, repartida en cuatro criterios. El peso de cada uno dice qué se está evaluando realmente.</p>
+    <div class="rub-meter" id="rub-meter"></div>
+    <ul class="rub-leyenda" id="rub-leyenda"></ul>
+    <p class="nota-blk">Comprensión conceptual y modelización física suman 7 de los 10 puntos: el examen premia entender y saber plantear, no recitar. La integración temática se verifica con la pregunta obligatoria de otro eje, y la comunicación técnica se pondera sobre el conjunto de la exposición.</p>
+  </section>
+
+  <section class="blk">
+    <h2>Cómo usar esta pantalla</h2>
+    <div class="uso">
+      <div class="uso-item">
+        <span class="uso-n">1</span>
+        <div>
+          <b>Elegí una tarjeta.</b> <em>Sortear tarjeta</em> entrega una al azar, como en la mesa real. <em>Explorar banco</em> abre las 40 agrupadas por eje para ir a una en particular.
+        </div>
+      </div>
+      <div class="uso-item">
+        <span class="uso-n">2</span>
+        <div>
+          <b>Comparí las dos columnas.</b> A la izquierda, lo único que recibe el estudiante: la situación y su cronograma. A la derecha, lo que el tribunal tiene y el estudiante no ve. Están una al lado de la otra a propósito: esa asimetría es el dispositivo.
+        </div>
+      </div>
+      <div class="uso-item">
+        <span class="uso-n">3</span>
+        <div>
+          <b>Probá los tiempos.</b> En el cronograma, cada paso se despliega al hacerle clic, y los que tienen tiempo asignado traen un cronómetro que corre de verdad.
+        </div>
+      </div>
+      <div class="uso-item">
+        <span class="uso-n">4</span>
+        <div>
+          <b>Simulá una calificación.</b> En la rúbrica, al hacer clic en un nivel de desempeño se carga el puntaje sugerido de ese criterio y se actualiza el total sobre 10.
+        </div>
+      </div>
+    </div>
+    <p class="cta-wrap"><button class="btn btn-primary btn-lg" id="ir-dispositivo">Abrir el dispositivo</button></p>
+  </section>
+
+  <section class="blk blk-estado">
+    <h2>Estado del contenido y marco normativo</h2>
+    <p>Las 40 tarjetas, sus ejes y sus temas provienen del Anexo I del proyecto institucional elevado al Consejo Departamental de Materias Básicas. Los enunciados de situación, los resultados de aprendizaje y las preguntas guía son un <strong>borrador de trabajo</strong> elaborado para este dispositivo: requieren revisión y aprobación de la cátedra antes de constituir el Banco Oficial definitivo.</p>
+    <p>El protocolo se apoya en el PAAA Física I 2026, en el artículo 7.2.2 de la Ordenanza 1549 —que define la condición de regularidad— y en el modelo de evaluación por competencias de la Universidad Tecnológica Nacional. La rúbrica y la Ficha Individual de Evaluación (código FI-F1-01, versión 1.0) constituyen el Anexo II del mismo proyecto.</p>
+  </section>
+</section>
+
+<!-- ═════════════════ VISTA: EL DISPOSITIVO ═════════════════ -->
+<section id="vista-dispositivo" role="tabpanel" aria-labelledby="nav-dispositivo" hidden>
   <div class="tabs" role="tablist">
     <button role="tab" aria-selected="true" data-pane="estudiante">Vista del estudiante</button>
     <button role="tab" aria-selected="false" data-pane="tribunal">Vista del tribunal</button>
@@ -434,6 +643,7 @@ footer .sig{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.06em; t
       </div>
     </section>
   </div>
+</section>
 
   <footer>
     <p><b>Estado del contenido.</b> Las 40 tarjetas, sus ejes y sus temas provienen del Anexo I del proyecto institucional. Los enunciados de situación, los resultados de aprendizaje, las preguntas guía y las preguntas integradoras son un borrador de trabajo elaborado para este dispositivo: requieren revisión y aprobación de la cátedra antes de constituir el Banco Oficial.</p>
@@ -1276,6 +1486,83 @@ const TARJETAS = [
     pintarRubrica();
   }
 
+  /* ── contenido de la vista "El proyecto" ── */
+  (function explicacion(){
+    const conDur = PROTOCOLO.filter(p=>p.dur);
+    const sumaDur = conDur.reduce((a,p)=>a+p.dur, 0);
+    $("#mini-band").innerHTML = conDur.map(p=>
+      `<i style="flex:${p.dur}" title="${p.titulo}"></i>`
+    ).join("");
+
+    $("#pasos-exp").innerHTML = PROTOCOLO.map(p=>`
+      <li>
+        <span class="n">${p.paso}</span>
+        <span class="tx"><b>${p.titulo}</b><span>${p.estudiante}</span></span>
+        <span class="d">${p.durTexto}</span>
+      </li>`).join("");
+
+    $("#ejes-exp").innerHTML = ["A","B","C","D","E","F","T"].map(k=>{
+      const e = EJES[k], n = TARJETAS.filter(t=>t.eje===k).length;
+      const nombre = k==="T" ? "Transversales — integran varias unidades" : e.nombre;
+      return `<li data-eje="${k}">
+        <span class="rail"></span>
+        <span class="nm"><small>${e.tag}</small>${nombre}</span>
+        <span class="ct">${n} tarjetas</span>
+      </li>`;
+    }).join("");
+
+    /* medidor de pesos: una sola tonalidad, escalonada por peso, con leyenda rotulada */
+    const tono = ["#2B3A47","#4A5D6E","#6C8192","#97A8B5"];
+    const tonoOscuro = ["#DCE3E9","#A9B7C2","#7D8E9C","#5A6976"];
+    const esOscuro = matchMedia("(prefers-color-scheme: dark)").matches;
+    const paleta = () => (document.documentElement.getAttribute("data-theme")==="dark"
+      || (!document.documentElement.getAttribute("data-theme") && esOscuro)) ? tonoOscuro : tono;
+
+    function pintarMedidor(){
+      const p = paleta();
+      $("#rub-meter").innerHTML = RUBRICA.map((c,i)=>
+        `<i style="flex:${c.puntaje};background:${p[i]}" title="${c.criterio}: ${c.puntaje} de 10"></i>`
+      ).join("");
+      $("#rub-leyenda").innerHTML = RUBRICA.map((c,i)=>
+        `<li><span class="sw" style="background:${p[i]}"></span>${c.criterio} <b>${c.puntaje}/10</b></li>`
+      ).join("");
+    }
+    pintarMedidor();
+    document.addEventListener("temacambiado", pintarMedidor);
+    matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", pintarMedidor);
+    new MutationObserver(pintarMedidor).observe(document.documentElement,
+      { attributes:true, attributeFilter:["data-theme"] });
+  })();
+
+  /* ── cambio de vista ── */
+  const VKEY = "fisica1-vista";
+  function irA(v, guardar){
+    const esDisp = v === "dispositivo";
+    $("#vista-proyecto").hidden = esDisp;
+    $("#vista-dispositivo").hidden = !esDisp;
+    $("#toolbar").hidden = !esDisp;
+    if(!esDisp){ $("#banco").hidden = true; $("#explorar").setAttribute("aria-pressed","false"); }
+    $$(".nav button").forEach(b=> b.setAttribute("aria-selected", String(b.dataset.vista===v)));
+    if(guardar){
+      try{ localStorage.setItem(VKEY, v); }catch(e){}
+      if(history.replaceState) history.replaceState(null, "", "#" + v);
+    }
+  }
+  $$(".nav button").forEach(b=> b.addEventListener("click", ()=>{
+    irA(b.dataset.vista, true);
+    window.scrollTo({top:0, behavior:"smooth"});
+  }));
+  $("#ir-dispositivo").addEventListener("click", ()=>{
+    irA("dispositivo", true);
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  let inicial = "proyecto";
+  const h = (location.hash || "").replace("#","");
+  if(h === "proyecto" || h === "dispositivo") inicial = h;
+  else { try{ const g = localStorage.getItem(VKEY); if(g) inicial = g; }catch(e){} }
+  irA(inicial, false);
+
   /* ── tabs (angosto) ── */
   $$(".tabs button").forEach(b=> b.addEventListener("click", ()=>{
     $$(".tabs button").forEach(x=> x.setAttribute("aria-selected", String(x===b)));
@@ -1298,6 +1585,7 @@ const TARJETAS = [
     var v = oscuroAhora ? "light" : "dark";
     aplicar(v);
     try { localStorage.setItem(KEY, v); } catch(e){}
+    document.dispatchEvent(new Event("temacambiado"));
   });
 })();
 </script>
